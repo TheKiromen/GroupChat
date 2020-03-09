@@ -1,16 +1,22 @@
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class ConnectionAcceptor implements Runnable{
 
-    private ServerSocket server;
-    private Chatroom globalChat;
-    Socket connection;
+    private final ServerSocket server;
+    private final Chatroom globalChat;
+    private final ArrayList<User> users;
 
-    public ConnectionAcceptor(ServerSocket serverSocket,Chatroom chatroom){
+    //TMP variables
+    private Socket connection;
+    private User client;
+
+    public ConnectionAcceptor(ServerSocket serverSocket, Chatroom chatroom, ArrayList<User> users){
         this.server=serverSocket;
         this.globalChat=chatroom;
+        this.users=users;
     }
 
     public void run(){
@@ -19,7 +25,10 @@ public class ConnectionAcceptor implements Runnable{
                 connection=server.accept();
                 //TEMP - get nickname from users message object
                 //Use objectInputStream to get initial message from client;
-                globalChat.addUser(connection);
+                client = new User("Jan",connection,globalChat);
+                users.add(client);
+                //TODO Add new Thread for each user to listen for messages
+                //TODO make this thread send out message to all other users in chatroom
             } catch (IOException e) {
                 System.out.println("Connection error:");
                 System.out.println(e.getMessage());

@@ -4,9 +4,24 @@ public class User {
 
     private String nickname;
     private Socket socket;
+    private Chatroom chatroom;
 
-    public User(String nickname, Socket socket){
+    public User(String nickname, Socket socket,Chatroom chatroom){
         this.nickname=nickname;
         this.socket=socket;
+        this.chatroom=chatroom;
+    }
+
+    //Getters
+    public String getNickname(){
+        return nickname;
+    }
+
+    public Socket getSocket(){
+        return socket;
+    }
+
+    public Chatroom getChatroom(){
+        return chatroom;
     }
 }

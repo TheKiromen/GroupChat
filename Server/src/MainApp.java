@@ -1,14 +1,13 @@
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
+
 
 public class MainApp {
 
     private ServerSocket server;
-    private Set<Chatroom> chatrooms = new HashSet<Chatroom>();
     private Chatroom global = new Chatroom("Global",1);
+    private ArrayList<User> clients = new ArrayList<User>();
 
     public static void main(String[] args){
         MainApp app = new MainApp();
@@ -16,7 +15,6 @@ public class MainApp {
     }
 
     private void run(){
-        chatrooms.add(global);
 
         try {
             server = new ServerSocket(6789);
@@ -25,10 +23,7 @@ public class MainApp {
             System.out.println(e.getMessage());
         }
 
-        Thread connections = new Thread(new ConnectionAcceptor(server,global));
+        Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));
         connections.run();
-
-        Thread messages = new Thread(new MessageSender(chatrooms));
-        messages.run();
     }
 }
