@@ -17,5 +17,7 @@ public class MainApp {
             System.out.println("Error while connecting bo server:");
             System.out.println(e.getMessage());
         }
+        //TMP to not disconnect from server
+        while(true){}
     }
 }

@@ -8,4 +8,12 @@ public class Chatroom {
         this.ID=ID;
     }
 
+    public boolean equals(Chatroom c){
+        if(this.name==c.name&&this.ID==c.ID){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

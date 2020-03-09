@@ -15,7 +15,6 @@ public class MainApp {
     }
 
     private void run(){
-
         try {
             server = new ServerSocket(6789);
         } catch (IOException e) {
