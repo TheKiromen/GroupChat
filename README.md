@@ -1,2 +1,2 @@
 # GroupChat
- Small chat application
+ Small chat application IntelliJ IDEA
