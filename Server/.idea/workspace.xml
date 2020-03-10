@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="" />
+    <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/src/MessageReciever.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/MessagesHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MessagesHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessagesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessagesHandler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YuGclrffM0oyEXGhkG0FEiADLc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -52,34 +66,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583824560335">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583824560335" />
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1583793050758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583793050758" />
-    <state x="630" y="158" key="FileChooserDialogImpl" timestamp="1583794101412">
+    <state x="630" y="158" key="FileChooserDialogImpl" timestamp="1583861990928">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="630" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583794101412" />
-    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1583794485033">
+    <state x="630" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583861990928" />
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1583866243078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583794485033" />
-    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1583794485033">
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
+    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1583866243078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583794485033" />
-    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1583794485033">
+    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
+    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1583866243078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583794485033" />
-    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1583794485033">
+    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
+    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1583866243078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583794485033" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583785151997">
+    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583861975331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583785151997" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583861975331" />
     <state x="209" y="34" key="new project wizard" timestamp="1583785164703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
