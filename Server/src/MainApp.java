@@ -22,7 +22,9 @@ public class MainApp {
             System.out.println(e.getMessage());
         }
 
+        //New Thread to handle connections
         Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));
         connections.run();
+
     }
 }

@@ -6,6 +6,7 @@ public class MessageReciever implements Runnable{
 
     private final Socket connection;
     private ObjectInputStream inFromServer=null;
+    //TODO remove later
     int i=0;
 
     public MessageReciever(Socket connection){
@@ -17,6 +18,7 @@ public class MessageReciever implements Runnable{
         }
     }
 
+    //Listens for message from server and prints it
     public void run() {
         while(true){
             try {

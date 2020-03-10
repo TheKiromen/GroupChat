@@ -20,12 +20,14 @@ public class MainApp {
 
             //Send initial message to server
             outToSever = new ObjectOutputStream(connection.getOutputStream());
+            //TODO Make this send initial message with username
             outToSever.writeObject(new Dimension(5,5));
             outToSever.flush();
 
             //Start a thread for listening to messages from server
             Thread t = new Thread(new MessageReciever(connection));
             t.run();
+
         } catch (IOException e) {
             System.out.println("Error while connecting bo server:");
             System.out.println(e.getMessage());

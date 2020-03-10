@@ -5,14 +5,15 @@ import java.util.ArrayList;
 
 public class ConnectionAcceptor implements Runnable{
 
+    //Variables
     private final ServerSocket server;
     private final Chatroom globalChat;
     private final ArrayList<User> clients;
 
-    //TMP variables
     private Socket connection;
     private User client;
     private Thread messages;
+
 
     public ConnectionAcceptor(ServerSocket serverSocket, Chatroom chatroom, ArrayList<User> clients){
         this.server=serverSocket;
@@ -20,15 +21,18 @@ public class ConnectionAcceptor implements Runnable{
         this.clients=clients;
     }
 
+    //Listens for new connections and handles them
     public void run(){
         while(true){
             try {
                 connection=server.accept();
-                //TEMP - get nickname from users message object
-                //Use objectInputStream to get initial message from client;
+                //TODO get nickname from user's message object
+                //TODO Use objectInputStream to get initial message from client;
+                //Creates new user and adds him to the list
                 client = new User("Jan",connection,globalChat);
                 clients.add(client);
 
+                //New Thread for each User, responsible for sending and receiving messages
                 messages=new Thread(new MessagesHandler(client,clients));
                 messages.run();
 

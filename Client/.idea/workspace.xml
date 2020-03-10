@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MessageReciever.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageReciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageReciever.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MessagesHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MessagesHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/MessagesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MessagesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

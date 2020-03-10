@@ -25,6 +25,7 @@ public class MessagesHandler implements Runnable{
     public void run() {
         //TODO make server not shit itself when user disconnects
         //TODO listen for message and send it over to everyone else in the same chatroom
+        //TODO move listening for initial message to ConnectionAcceptor
         while(true){
             try {
                 //Listen for initial message (take this out of the loop)
