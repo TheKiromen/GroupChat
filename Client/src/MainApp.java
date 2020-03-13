@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
@@ -26,7 +25,7 @@ public class MainApp {
 
             //Start a thread for listening to messages from server
             Thread t = new Thread(new MessageReciever(connection));
-            t.run();
+            t.start();
 
         } catch (IOException e) {
             System.out.println("Error while connecting bo server:");

@@ -24,7 +24,7 @@ public class MainApp {
 
         //New Thread to handle connections
         Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));
-        connections.run();
+        connections.start();
 
     }
 }
