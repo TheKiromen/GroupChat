@@ -35,7 +35,6 @@ public class ConnectionAcceptor implements Runnable{
                 //New Thread for each User, responsible for sending and receiving messages
                 messages=new Thread(new MessagesHandler(client,clients));
                 messages.start();
-
             } catch (IOException e) {
                 System.out.println("Connection error:");
                 System.out.println(e.getMessage());

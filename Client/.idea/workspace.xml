@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/MessageReciever.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/MessageReciever.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageReciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ConnectionAcceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ConnectionAcceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MessagesHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MessagesHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/ConnectionAcceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ConnectionAcceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/MessagesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MessagesHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,25 +72,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583865076087" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1584138797010">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1584531232358">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584138797010" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584531232358" />
     <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583866237048" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1584138797010">
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1584531232358">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584138797010" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584531232358" />
     <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583866237048" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1584138797010">
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1584531232358">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584138797010" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584531232358" />
     <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583866237047" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1584138797010">
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1584531232358">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584138797010" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584531232358" />
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583866237048" />
   </component>
 </project>

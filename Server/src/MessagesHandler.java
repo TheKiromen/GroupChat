@@ -2,6 +2,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.SocketException;
 import java.util.ArrayList;
 
 public class MessagesHandler implements Runnable{
@@ -22,8 +23,7 @@ public class MessagesHandler implements Runnable{
         }
     }
 
-    public void run() {
-        //TODO make server not shit itself when user disconnects
+    public void run(){
         //TODO listen for message and send it over to everyone else in the same chatroom
         //TODO move listening for initial message to ConnectionAcceptor
         while(true){
@@ -39,9 +39,16 @@ public class MessagesHandler implements Runnable{
                     outToClient.writeObject(new Dimension(i,i));
                     outToClient.flush();
                 }
-            } catch (IOException e) {
+
+            }//Deletes Thread when user disconnects
+            catch(SocketException e){
+                clients.remove(client);
+                break;
+            }
+            catch (IOException e) {
                 e.printStackTrace();
-            } catch (ClassNotFoundException e) {
+            }
+            catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
         }

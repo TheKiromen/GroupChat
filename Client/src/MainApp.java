@@ -24,7 +24,7 @@ public class MainApp {
             outToSever.flush();
 
             //Start a thread for listening to messages from server
-            Thread t = new Thread(new MessageReciever(connection));
+            Thread t = new Thread(new MessageReceiver(connection));
             t.start();
 
         } catch (IOException e) {
