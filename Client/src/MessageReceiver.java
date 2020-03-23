@@ -24,8 +24,8 @@ public class MessageReceiver implements Runnable{
         while(true){
             try {
                 //TODO Improve on this so it makes more sense.
+                System.out.println("Message number "+i+" "+inFromServer.readObject());
                 i++;
-                System.out.println("Message number"+i+" "+inFromServer.readObject());
             }//Ends Thread if server closes
             catch(SocketException e){
                 System.out.println("Connection to server lost.");

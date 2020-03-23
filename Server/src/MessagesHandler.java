@@ -33,10 +33,16 @@ public class MessagesHandler implements Runnable{
 
                 //Send message to client (make it send message to all clients)
                 outToClient = new ObjectOutputStream(client.getSocket().getOutputStream());
-                outToClient.writeObject(new Dimension(22, 22));
+               // outToClient.writeObject(new Dimension(22, 22));
+                outToClient.writeObject(new String("New attempt of real time sending messages"));
                 outToClient.flush();
-                for(int i=0;i<50;i++){
+             /*   for(int i=0;i<50;i++){
                     outToClient.writeObject(new Dimension(i,i));
+                    outToClient.flush();
+                }
+                */
+                for(int i=0;i<10;i++){
+                    outToClient.writeObject(new String("Attempt no: ")+(i+1));
                     outToClient.flush();
                 }
 

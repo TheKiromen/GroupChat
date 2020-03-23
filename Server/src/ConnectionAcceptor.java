@@ -26,6 +26,7 @@ public class ConnectionAcceptor implements Runnable{
         while(true){
             try {
                 connection=server.accept();
+                System.out.println("Server connected to new client"); //todo: add name of the client
                 //TODO get nickname from user's message object
                 //TODO Use objectInputStream to get initial message from client;
                 //Creates new user and adds him to the list
