@@ -1,12 +1,14 @@
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Date;
+
 
 public class MainApp {
 
     private ServerSocket server;
-    private Set<Chatroom> chatrooms;
+    private Chatroom global = new Chatroom("Global",1);
+    private ArrayList<User> clients = new ArrayList<User>();
 
     public static void main(String[] args){
         MainApp app = new MainApp();
@@ -16,12 +18,18 @@ public class MainApp {
     private void run(){
         try {
             server = new ServerSocket(6789);
+            String date = (new Date()).toString();
+            System.out.println("Server's sending date: " + date);
+            System.out.println("Server is waiting for client connection...");
+
         } catch (IOException e) {
-            System.out.println("Error while trying to create server");
+            System.out.println("Error while trying to create server:");
             System.out.println(e.getMessage());
         }
 
-        Thread connections = new Thread(new ConnectionAcceptor());
-        Thread messages = new Thread(new MessageSender());
+        //New Thread to handle connections
+        Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));
+        connections.start();
+
     }
 }
