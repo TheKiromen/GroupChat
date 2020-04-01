@@ -14,13 +14,15 @@ public class User {
 
     //Getters
     public String getNickname(){
-        return nickname;
+        return this.nickname;
     }
-
+    public void setNickname(String nickname)
+    {
+        this.nickname = nickname;
+    }
     public Socket getSocket(){
         return socket;
     }
-
     public Chatroom getChatroom(){
         return chatroom;
     }

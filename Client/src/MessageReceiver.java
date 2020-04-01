@@ -1,5 +1,4 @@
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
 
@@ -7,12 +6,15 @@ public class MessageReceiver implements Runnable{
 
     private final Socket connection;
     private ObjectInputStream inFromServer=null;
-    //TODO remove later
-    int i=0;
+    private BufferedReader in;
+    private PrintWriter out;
+
 
     public MessageReceiver(Socket connection){
         this.connection=connection;
         try {
+            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            out = new PrintWriter(connection.getOutputStream());
             inFromServer = new ObjectInputStream(connection.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
@@ -24,8 +26,11 @@ public class MessageReceiver implements Runnable{
         while(true){
             try {
                 //TODO Improve on this so it makes more sense.
-                System.out.println("Message number "+i+" "+inFromServer.readObject());
-                i++;
+                // Nothing happens here
+                System.out.println("Out:" + out);
+                System.out.println(in.readLine());
+                System.out.println(inFromServer.readObject());
+
             }//Ends Thread if server closes
             catch(SocketException e){
                 System.out.println("Connection to server lost.");
