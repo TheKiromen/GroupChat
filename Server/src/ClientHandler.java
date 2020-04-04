@@ -3,15 +3,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class ClientHandler implements Runnable {
 
+    //TODO Try sending objects instead of strings
+
+
+
+    //Variables
+    private ArrayList<ClientHandler> users;
     private Socket client;
     private PrintWriter writeToClient;
     private BufferedReader readFromClient;
 
-    public ClientHandler(Socket clientSocket) throws IOException {
+
+    //Constructor, setting up communication streams
+    public ClientHandler(Socket clientSocket, ArrayList<ClientHandler> users) throws IOException {
         this.client = clientSocket;
+        this.users = users;
         writeToClient = new PrintWriter(client.getOutputStream(),true);
         readFromClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
     }
@@ -20,13 +30,17 @@ public class ClientHandler implements Runnable {
     public void run() {
         try{
             while(true){
+                //Listen for message and send it to all clients
                 String message = readFromClient.readLine();
-                System.out.println(message);
-                writeToClient.println("Server received your message!");
+                for(ClientHandler u : users){
+                    u.sendMessage(message);
+                }
             }
-        }catch(IOException e){
+        }
+        catch(IOException e){
             System.err.println(e.getMessage());
-        }finally{
+        }//Cleanup
+        finally{
             writeToClient.close();
             try {
                 readFromClient.close();
@@ -35,4 +49,10 @@ public class ClientHandler implements Runnable {
             }
         }
     }
+
+    //Method for safe message sending from outside the thread
+    public void sendMessage(String message){
+       writeToClient.println(message);
+    }
+
 }
