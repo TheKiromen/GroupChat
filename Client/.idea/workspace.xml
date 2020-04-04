@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/MessageReceiver.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/Chatroom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/ConnectionAcceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Chatroom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ConnectionAcceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MessagesHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/MessagesHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="800" />
-    <option name="height" value="860" />
   </component>
   <component name="ProjectId" id="1YuGeuQxKAkWaUTlMXEf8Tl6GL6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -87,17 +84,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586009214685" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1586012509057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586012509057" />
     <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1586012509057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586012509057" />
     <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1586012509057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586012509057" />
     <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1586009165112" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1586012509057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586009165113" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586012509057" />
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586009165113" />
   </component>
   <component name="masterDetails">
