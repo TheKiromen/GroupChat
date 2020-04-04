@@ -1,29 +1,23 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
 public class ClientHandler implements Runnable {
 
-    //TODO Try sending objects instead of strings
-
-
-
     //Variables
     private ArrayList<ClientHandler> users;
     private Socket client;
-    private PrintWriter writeToClient;
-    private BufferedReader readFromClient;
+    private ObjectInputStream inFromClient;
+    private ObjectOutputStream outToClient;
 
 
     //Constructor, setting up communication streams
     public ClientHandler(Socket clientSocket, ArrayList<ClientHandler> users) throws IOException {
         this.client = clientSocket;
         this.users = users;
-        writeToClient = new PrintWriter(client.getOutputStream(),true);
-        readFromClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
+
+        inFromClient = new ObjectInputStream(clientSocket.getInputStream());
+        outToClient = new ObjectOutputStream(clientSocket.getOutputStream());
     }
 
     @Override
@@ -31,19 +25,20 @@ public class ClientHandler implements Runnable {
         try{
             while(true){
                 //Listen for message and send it to all clients
-                String message = readFromClient.readLine();
+                Message msg = (Message)inFromClient.readObject();
+                System.out.println(msg.getSender()+" sent message.");
                 for(ClientHandler u : users){
-                    u.sendMessage(message);
+                    u.sendMessage(msg);
                 }
             }
         }
-        catch(IOException e){
+        catch(IOException | ClassNotFoundException e){
             System.err.println(e.getMessage());
         }//Cleanup
         finally{
-            writeToClient.close();
             try {
-                readFromClient.close();
+                inFromClient.close();
+                outToClient.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -51,8 +46,9 @@ public class ClientHandler implements Runnable {
     }
 
     //Method for safe message sending from outside the thread
-    public void sendMessage(String message){
-       writeToClient.println(message);
+    public void sendMessage(Message msg) throws IOException {
+        outToClient.writeObject(msg);
+        outToClient.flush();
     }
 
 }

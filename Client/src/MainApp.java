@@ -6,13 +6,12 @@ import java.util.concurrent.Executors;
 
 public class MainApp {
 
-    //TODO Send objets instead of strings, username selection support
 
     //Variables
     private Scanner input = new Scanner(System.in);
-    private PrintWriter writeToServer;
-    String message;
+    String message,username;
     private ExecutorService pool = Executors.newSingleThreadExecutor();
+    private ObjectOutputStream outToServer;
 
 
     public static void main(String args[]){
@@ -25,21 +24,29 @@ public class MainApp {
         try {
             //Connecting to server
             Socket connection = new Socket("127.0.0.1",6789);
+
             //Setting up output stream to server
-            writeToServer = new PrintWriter(connection.getOutputStream(),true);
+            outToServer = new ObjectOutputStream(connection.getOutputStream());
+
             //Create and run thread for listening for messages
             ServerListener listeningThread = new ServerListener(connection);
             pool.execute(listeningThread);
 
+            System.out.println("Enter your username:");
+            username = input.nextLine();
+
             //Main loop for inputs
             while (true) {
+                System.out.println("Enter your message:");
                 //Input message and send it to server
                 //If nothing is entered program closes
                 message = input.nextLine();
                 if(message.equals("")){
                     break;
                 }else{
-                    writeToServer.println(message);
+                    Message msg = new Message(username,message);
+                    outToServer.writeObject(msg);
+                    outToServer.flush();
                 }
             }
 
@@ -48,7 +55,11 @@ public class MainApp {
             e.printStackTrace();
         }//Cleanup
         finally {
-            writeToServer.close();
+            try {
+                outToServer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
