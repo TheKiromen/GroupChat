@@ -8,15 +8,22 @@ import java.util.concurrent.Executors;
 
 public class MainApp {
 
+    //TODO Make chatrooms, option to change your room.
+
     //Variables
     private ArrayList<ClientHandler> users = new ArrayList<>();
     private ExecutorService pool = Executors.newFixedThreadPool(5);
+
 
     public static void main(String[] args){
         MainApp app = new MainApp();
         app.run();
     }
 
+    /**
+     * Creates server socket, accepts incoming client connections until you shut down server.
+     * Creates new Thread responsible for communication for every client and runs it.
+     */
     private void run(){
         try {
             //Server setup

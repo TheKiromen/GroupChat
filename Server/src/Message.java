@@ -5,16 +5,29 @@ public class Message implements Serializable {
     private String sender;
     private String content;
 
-    Message(String sender,String content){
-        this.sender=sender;
-        this.content=content;
+    /**
+     * Creates Message object with specified sender and message content.
+     * @param sender  client who sent message.
+     * @param content content of message itself.
+     */
+    Message(String sender, String content) {
+        this.sender = sender;
+        this.content = content;
     }
 
-    public String getSender(){
+    /**
+     * Returns sender of the message.
+     * @return the sender of this message.
+     */
+    public String getSender() {
         return sender;
     }
 
-    public String getContent(){
+    /**
+     * Returns body of the message.
+     * @return the content of this message.
+     */
+    public String getContent() {
         return content;
     }
 }

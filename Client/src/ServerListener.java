@@ -7,15 +7,23 @@ public class ServerListener implements Runnable {
 
     //Variables
     private Socket server;
-
     private ObjectInputStream inFromServer;
 
+    /**
+     * Creates new thread with associated socket. Responsible for receiving messages from server.
+     * @param sv socket connected to server.
+     * @throws IOException When cant establish connection stream with server.
+     */
     //Constructor, setting up input stream from server
     ServerListener(Socket sv) throws IOException {
         this.server=sv;
-        inFromServer = new ObjectInputStream(sv.getInputStream());
+        inFromServer = new ObjectInputStream(server.getInputStream());
     }
 
+    /**
+     * Main method responsible for managing incoming messages.
+     * Prints out in console who sent message and it contents.
+     */
     @Override
     public void run() {
         try {

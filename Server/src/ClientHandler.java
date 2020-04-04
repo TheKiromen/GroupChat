@@ -11,15 +11,26 @@ public class ClientHandler implements Runnable {
     private ObjectOutputStream outToClient;
 
 
+    /**
+     * Creates new thread responsible for communication with specified client
+     * @param clientSocket client Socket you want communicate with
+     * @param users list of users in chatroom.
+     * @throws IOException When cant establish stream connection with client.
+     */
     //Constructor, setting up communication streams
     public ClientHandler(Socket clientSocket, ArrayList<ClientHandler> users) throws IOException {
         this.client = clientSocket;
         this.users = users;
 
-        inFromClient = new ObjectInputStream(clientSocket.getInputStream());
-        outToClient = new ObjectOutputStream(clientSocket.getOutputStream());
+        inFromClient = new ObjectInputStream(client.getInputStream());
+        outToClient = new ObjectOutputStream(client.getOutputStream());
     }
 
+
+    /**
+     * Main method responsible for receiving and sending messages.
+     * Sends received message to all users in chatroom.
+     */
     @Override
     public void run() {
         try{
@@ -45,6 +56,11 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Safely sends message to this client from outside of this class.
+     * @param msg Message you want to send.
+     * @throws IOException When stream error occurs.
+     */
     //Method for safe message sending from outside the thread
     public void sendMessage(Message msg) throws IOException {
         outToClient.writeObject(msg);

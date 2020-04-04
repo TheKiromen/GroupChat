@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 
 public class MainApp {
 
+    //TODO Changing chatrooms
 
     //Variables
     private Scanner input = new Scanner(System.in);
@@ -19,7 +20,10 @@ public class MainApp {
         app.run();
     }
 
-
+    /**
+     * Main method responsible for connecting to server and sending messages.
+     * Currently connected to localhost but later in development you will get to choose ip.
+     */
     private void run(){
         try {
             //Connecting to server
@@ -32,6 +36,7 @@ public class MainApp {
             ServerListener listeningThread = new ServerListener(connection);
             pool.execute(listeningThread);
 
+            //Get username for client
             System.out.println("Enter your username:");
             username = input.nextLine();
 
@@ -39,7 +44,7 @@ public class MainApp {
             while (true) {
                 System.out.println("Enter your message:");
                 //Input message and send it to server
-                //If nothing is entered program closes
+                //If nothing is entered close program
                 message = input.nextLine();
                 if(message.equals("")){
                     break;
