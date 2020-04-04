@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -12,7 +11,8 @@ public class MainApp {
     private String userName;
     private String str = null;
     private BufferedReader userInput;
-
+    private Scanner myObj;
+    private Message msg;
     public static void main(String args[]){
         MainApp app = new MainApp();
         app.run();
@@ -26,21 +26,24 @@ public class MainApp {
             //User input - username setting
             outToSever = new ObjectOutputStream(connection.getOutputStream());
 
-            Scanner myObj = new Scanner(System.in);
+            myObj = new Scanner(System.in);
             System.out.println("Enter your username:");
             userName = myObj.nextLine();
             outToSever.writeObject(userName);
 
             //Type a message, send it to server
             userInput = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Type a message: ");
 
-            while ((str = userInput.readLine()) != null)
-            {
-                System.out.println("[CLIENT]"+ userName +": " + str);
-                outToSever.writeObject(str);
-                outToSever.flush();
-            }
+            System.out.println("Type a message: ");
+            str = userInput.readLine();
+
+            //Creates new object msg and prints content here (twice?)
+            msg = new Message(str);
+            System.out.println("[CLIENT] " + userName + ": " + msg.getContent());
+
+            //Sends msg to server
+            outToSever.writeObject(msg);
+            outToSever.flush();
 
             //Start a thread for listening to messages from server
             Thread t = new Thread(new MessageReceiver(connection));

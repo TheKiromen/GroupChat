@@ -9,6 +9,7 @@ public class MainApp {
     private ServerSocket server;
     private Chatroom global = new Chatroom("Global",1);
     private ArrayList<User> clients = new ArrayList<User>();
+    private String date;
 
     public static void main(String[] args){
         MainApp app = new MainApp();
@@ -18,7 +19,7 @@ public class MainApp {
     private void run(){
         try {
             server = new ServerSocket(6789);
-            String date = (new Date()).toString();
+            date = (new Date()).toString();
             System.out.println("Server's sending date: " + date);
             System.out.println("Server is waiting for client connection...");
 

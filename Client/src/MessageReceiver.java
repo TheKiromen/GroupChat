@@ -7,14 +7,14 @@ public class MessageReceiver implements Runnable{
     private final Socket connection;
     private ObjectInputStream inFromServer=null;
     private BufferedReader in;
-    private PrintWriter out;
+  //private PrintWriter out;
 
 
     public MessageReceiver(Socket connection){
         this.connection=connection;
         try {
             in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            out = new PrintWriter(connection.getOutputStream());
+            //out = new PrintWriter(connection.getOutputStream());
             inFromServer = new ObjectInputStream(connection.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
@@ -27,7 +27,7 @@ public class MessageReceiver implements Runnable{
             try {
                 //TODO Improve on this so it makes more sense.
                 // Nothing happens here
-                System.out.println("Out:" + out);
+
                 System.out.println(in.readLine());
                 System.out.println(inFromServer.readObject());
 

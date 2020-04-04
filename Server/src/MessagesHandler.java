@@ -1,8 +1,6 @@
-import java.awt.*;
 import java.io.*;
 import java.net.SocketException;
 import java.util.ArrayList;
-
 
 
 public class MessagesHandler implements Runnable{
@@ -13,7 +11,7 @@ public class MessagesHandler implements Runnable{
     private ObjectOutputStream outToClient;
     private String str = null;
     private String nickName = null;
-    private PrintWriter out;
+    private Message msg;
 
 
 
@@ -39,29 +37,14 @@ public class MessagesHandler implements Runnable{
                   System.out.println("Welcome " + client.getNickname());
 
                   //Gets message from client and prints it
-                while ((str = inFromClient.readObject().toString()) != null)
-                {
-                    System.out.println("[SERVER] "+ client.getNickname() + ": " + str);
+
+                    System.out.println("[SERVER] New message from "+ client.getNickname());
 
                     //TODO make it send message to all clients
-                    out = new PrintWriter(client.getSocket().getOutputStream());
-                    //in = new BufferedReader(new InputStreamReader(client.getSocket().getInputStream()));
 
                     outToClient = new ObjectOutputStream(client.getSocket().getOutputStream());
-                    outToClient.writeObject(new String("[FROMServer] ") + nickName + " " + str);
+                    outToClient.writeObject(new String("[FROMServer] Server received a message"));
                     outToClient.flush();
-                }
-                /*  ---Old version: checking if messages are sent properly---
-
-                 outToClient.writeObject(new String("New attempt of real time sending messages"));
-                    outToClient.flush();
-
-                for(int i=0;i<10;i++){
-                    outToClient.writeObject(new String("Attempt no: ")+(i+1));
-                    outToClient.flush();
-                }
-                */
-
 
             }//Deletes Thread when user disconnects
             catch(SocketException e){
