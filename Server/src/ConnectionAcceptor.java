@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -10,6 +11,8 @@ public class ConnectionAcceptor implements Runnable{
     private final Chatroom globalChat;
     private final ArrayList<User> clients;
 
+    private InitialMessage init;
+    private ObjectInputStream inFromClient;
     private Socket connection;
     private User client;
     private Thread messages;
@@ -23,24 +26,35 @@ public class ConnectionAcceptor implements Runnable{
 
     //Listens for new connections and handles them
     public void run(){
+        System.out.println("Server is waiting for client connection...");
+
+        //Main connections loop
         while(true){
             try {
                 connection=server.accept();
-                System.out.println("Server connected to new client"); //todo: add name of the client
-                //TODO get nickname from user's message object
-                //TODO Use objectInputStream to get initial message from client;
-                //Creates new user and adds him to the list
-                client = new User("Jan",connection,globalChat);
-                clients.add(client);
+
+                try{
+                    inFromClient = new ObjectInputStream(connection.getInputStream());
+                    init=(InitialMessage)inFromClient.readObject();
+                    System.out.println(init.getUsername() + " just connected!");
+                    client = new User(init.getUsername(),connection,globalChat);
+                    clients.add(client);
+                }catch(IOException ex){
+                    ex.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
 
                 //New Thread for each User, responsible for sending and receiving messages
-                messages=new Thread(new MessagesHandler(client,clients));
-                messages.start();
+                //messages=new Thread(new MessagesHandler(client,clients));
+                //messages.start();
             } catch (IOException e) {
                 System.out.println("Connection error:");
                 System.out.println(e.getMessage());
             }
         }
+
+
     }
 
 }

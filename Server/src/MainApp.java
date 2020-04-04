@@ -18,14 +18,13 @@ public class MainApp {
     private void run(){
         try {
             server = new ServerSocket(6789);
-            String date = (new Date()).toString();
-            System.out.println("Server's sending date: " + date);
-            System.out.println("Server is waiting for client connection...");
+            System.out.println("Server is running");
 
         } catch (IOException e) {
             System.out.println("Error while trying to create server:");
             System.out.println(e.getMessage());
         }
+
 
         //New Thread to handle connections
         Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));

@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -7,6 +8,7 @@ public class MainApp {
 
     private Socket connection;
     private ObjectOutputStream outToSever;
+    private String username;
 
     public static void main(String args[]){
         MainApp app = new MainApp();
@@ -19,14 +21,13 @@ public class MainApp {
 
             //Send initial message to server
             outToSever = new ObjectOutputStream(connection.getOutputStream());
-            //TODO Make this send initial message with username
-           // outToSever.writeObject(new Dimension(5,5));
-            outToSever.writeObject(new String("Client's connection message"));
+            username = JOptionPane.showInputDialog("Enter your username");
+            outToSever.writeObject(new InitialMessage(username));
             outToSever.flush();
 
             //Start a thread for listening to messages from server
-            Thread t = new Thread(new MessageReceiver(connection));
-            t.start();
+            //Thread t = new Thread(new MessageReceiver(connection));
+            //t.start();
 
         } catch (IOException e) {
             System.out.println("Error while connecting to server:");
