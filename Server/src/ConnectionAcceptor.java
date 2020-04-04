@@ -33,22 +33,17 @@ public class ConnectionAcceptor implements Runnable{
             try {
                 connection=server.accept();
 
-                try{
-                    inFromClient = new ObjectInputStream(connection.getInputStream());
-                    init=(InitialMessage)inFromClient.readObject();
-                    System.out.println(init.getUsername() + " just connected!");
-                    client = new User(init.getUsername(),connection,globalChat);
-                    clients.add(client);
-                }catch(IOException ex){
-                    ex.printStackTrace();
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
+                inFromClient = new ObjectInputStream(connection.getInputStream());
+                init=(InitialMessage)inFromClient.readObject();
+                System.out.println(init.getUsername() + " just connected!");
+                client = new User(init.getUsername(),connection,globalChat);
+                clients.add(client);
+
 
                 //New Thread for each User, responsible for sending and receiving messages
                 //messages=new Thread(new MessagesHandler(client,clients));
                 //messages.start();
-            } catch (IOException e) {
+            } catch (IOException | ClassNotFoundException e) {
                 System.out.println("Connection error:");
                 System.out.println(e.getMessage());
             }
