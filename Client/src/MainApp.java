@@ -42,9 +42,10 @@ public class MainApp {
             //Frame to get username from client
             username = JOptionPane.showInputDialog("Enter your username");
 
+            System.out.println("Enter your message:");
+
             //Main loop for inputs
             while (true) {
-                System.out.println("Enter your message:");
                 //Input message and send it to server
                 //If nothing is entered close program
                 message = input.nextLine();
