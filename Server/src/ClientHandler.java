@@ -26,7 +26,6 @@ public class ClientHandler implements Runnable {
         outToClient = new ObjectOutputStream(client.getOutputStream());
     }
 
-
     /**
      * Main method responsible for receiving and sending messages.
      * Sends received message to all users in chatroom.
@@ -37,7 +36,7 @@ public class ClientHandler implements Runnable {
             while(true){
                 //Listen for message and send it to all clients
                 Message msg = (Message)inFromClient.readObject();
-                System.out.println(msg.getSender()+" sent message.");
+                System.out.println(msg.getSender()+" sent: " + msg.getContent());
                 for(ClientHandler u : users){
                     u.sendMessage(msg);
                 }

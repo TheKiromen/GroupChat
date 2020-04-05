@@ -3,6 +3,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import javax.swing.*;
 
 public class MainApp {
 
@@ -10,9 +11,11 @@ public class MainApp {
 
     //Variables
     private Scanner input = new Scanner(System.in);
-    String message,username;
+    private String message,username;
     private ExecutorService pool = Executors.newSingleThreadExecutor();
     private ObjectOutputStream outToServer;
+    private Socket connection;
+    private ServerListener listeningThread;
 
 
     public static void main(String args[]){
@@ -27,18 +30,17 @@ public class MainApp {
     private void run(){
         try {
             //Connecting to server
-            Socket connection = new Socket("127.0.0.1",6789);
+            connection = new Socket("127.0.0.1",6789);
 
             //Setting up output stream to server
             outToServer = new ObjectOutputStream(connection.getOutputStream());
 
             //Create and run thread for listening for messages
-            ServerListener listeningThread = new ServerListener(connection);
+            listeningThread = new ServerListener(connection);
             pool.execute(listeningThread);
 
-            //Get username for client
-            System.out.println("Enter your username:");
-            username = input.nextLine();
+            //Frame to get username from client
+            username = JOptionPane.showInputDialog("Enter your username");
 
             //Main loop for inputs
             while (true) {

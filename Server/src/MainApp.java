@@ -8,12 +8,13 @@ import java.util.concurrent.Executors;
 
 public class MainApp {
 
-    //TODO Make chatrooms, option to change your room.
+    //TODO Make chatrooms, ability to change your room.
 
     //Variables
     private ArrayList<ClientHandler> users = new ArrayList<>();
     private ExecutorService pool = Executors.newFixedThreadPool(5);
-
+    private ServerSocket server;
+    private ClientHandler clientThread;
 
     public static void main(String[] args){
         MainApp app = new MainApp();
@@ -27,16 +28,16 @@ public class MainApp {
     private void run(){
         try {
             //Server setup
-            ServerSocket server = new ServerSocket(6789);
+            server = new ServerSocket(6789);
             while(true){
 
                 //Listen for new connection
-                System.out.println("Waiting for connection");
+                System.out.println("Waiting for connection...");
                 Socket connection = server.accept();
-                System.out.println("Client connected");
+                System.out.println("New client connected!");
 
                 //Create and run new thread for each client
-                ClientHandler clientThread = new ClientHandler(connection,users);
+                clientThread = new ClientHandler(connection,users);
                 users.add(clientThread);
                 pool.execute(clientThread);
             }

@@ -15,7 +15,6 @@ public class Message implements Serializable {
         this.content=content;
     }
 
-
     /**
      * Returns sender of the message.
      * @return the sender of this message.
