@@ -1,35 +1,49 @@
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class MainApp {
 
+    //TODO Make chatrooms, ability to change your room.
+
+    //Variables
+    private ArrayList<ClientHandler> users = new ArrayList<>();
+    private ExecutorService pool = Executors.newFixedThreadPool(5);
     private ServerSocket server;
-    private Chatroom global = new Chatroom("Global",1);
-    private ArrayList<User> clients = new ArrayList<User>();
+    private ClientHandler clientThread;
 
     public static void main(String[] args){
         MainApp app = new MainApp();
         app.run();
     }
 
+    /**
+     * Creates server socket, accepts incoming client connections until you shut down server.
+     * Creates new Thread responsible for communication for every client and runs it.
+     */
     private void run(){
         try {
+            //Server setup
             server = new ServerSocket(6789);
-            String date = (new Date()).toString();
-            System.out.println("Server's sending date: " + date);
-            System.out.println("Server is waiting for client connection...");
+            while(true){
 
-        } catch (IOException e) {
-            System.out.println("Error while trying to create server:");
-            System.out.println(e.getMessage());
+                //Listen for new connection
+                System.out.println("Waiting for connection...");
+                Socket connection = server.accept();
+                System.out.println("New client connected!");
+
+                //Create and run new thread for each client
+                clientThread = new ClientHandler(connection,users);
+                users.add(clientThread);
+                pool.execute(clientThread);
+            }
         }
-
-        //New Thread to handle connections
-        Thread connections = new Thread(new ConnectionAcceptor(server,global,clients));
-        connections.start();
-
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
