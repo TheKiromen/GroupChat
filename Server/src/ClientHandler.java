@@ -1,11 +1,13 @@
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientHandler implements Runnable {
 
     //Variables
-    private ArrayList<ClientHandler> users;
+    private int chatroom;
+    private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
     private Socket client;
     private ObjectInputStream inFromClient;
     private ObjectOutputStream outToClient;
@@ -18,12 +20,15 @@ public class ClientHandler implements Runnable {
      * @throws IOException When cant establish stream connection with client.
      */
     //Constructor, setting up communication streams
-    public ClientHandler(Socket clientSocket, ArrayList<ClientHandler> users) throws IOException {
+    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom) throws IOException {
         this.client = clientSocket;
         this.users = users;
+        this.chatroom=chatroom;
 
         inFromClient = new ObjectInputStream(client.getInputStream());
         outToClient = new ObjectOutputStream(client.getOutputStream());
+
+
     }
 
     /**
@@ -37,9 +42,7 @@ public class ClientHandler implements Runnable {
                 //Listen for message and send it to all clients
                 Message msg = (Message)inFromClient.readObject();
                 System.out.println(msg.getSender()+" sent: " + msg.getContent());
-                for(ClientHandler u : users){
-                    u.sendMessage(msg);
-                }
+                sendMessageToAll(msg);
             }
         }
         catch(IOException | ClassNotFoundException e){
@@ -56,14 +59,26 @@ public class ClientHandler implements Runnable {
     }
 
     /**
-     * Safely sends message to this client from outside of this class.
+     * Safely sends message to this client.
      * @param msg Message you want to send.
      * @throws IOException When stream error occurs.
      */
-    //Method for safe message sending from outside the thread
+    //Method for safe message sending from inside and outside of the Thread
     public void sendMessage(Message msg) throws IOException {
         outToClient.writeObject(msg);
         outToClient.flush();
+    }
+
+    /**
+     * Safely sends message to all clients in chatroom.
+     * @param msg Message you want to send.
+     * @throws IOException When stream error occurs.
+     */
+    //Method for safe message broadcasting from inside and outside the Thread
+    public void sendMessageToAll(Message msg) throws IOException{
+        for(ClientHandler u : users.get(chatroom)){
+            u.sendMessage(msg);
+        }
     }
 
 }
