@@ -55,6 +55,9 @@ public class MainApp {
                 message = input.nextLine();
                 if(message.equals("")){
                     break;
+                }else if(message.equals("switch2")){
+                    outToServer.writeObject(new Request(RequestType.CHATROOM_CHANGE,2));
+                    outToServer.flush();
                 }else{
                     Message msg = new Message(username,message);
                     outToServer.writeObject(msg);

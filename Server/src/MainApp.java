@@ -35,6 +35,8 @@ public class MainApp {
 
             //Create global chatroom
             chatrooms.put(1,new ArrayList<ClientHandler>());
+            //TMP
+            chatrooms.put(2,new ArrayList<ClientHandler>());
 
             //\/ Comment for Intellij to disable infinite loop warning
             //noinspection InfiniteLoopStatement

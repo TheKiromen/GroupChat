@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ClientHandler implements Runnable {
 
     //Variables
+    Object input;
     String username;
     private int chatroom;
     private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
@@ -45,9 +46,17 @@ public class ClientHandler implements Runnable {
             //Main loop for broadcasting messages
             while(true){
                 //Listen for message and send it to all clients in your chatroom
-                msg = (Message)inFromClient.readObject();
-                System.out.println(msg.getSender()+" sent: " + msg.getContent());
-                sendMessageToAll(msg);
+                input=inFromClient.readObject();
+                try {
+                    msg=(Message)input;
+                    System.out.println(msg.getSender()+" sent: " + msg.getContent());
+                    sendMessageToAll(msg);
+                }catch(ClassCastException ex){
+                    Request r = (Request)input;
+                    System.out.println(username+" sent new request: "+r.getType());
+                    changeChatroom(r.getId());
+                    sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
+                }
             }
         }
         catch(IOException | ClassNotFoundException e){
@@ -84,6 +93,13 @@ public class ClientHandler implements Runnable {
         for(ClientHandler u : users.get(chatroom)){
             u.sendMessage(msg);
         }
+    }
+
+    public void changeChatroom(int id) throws IOException {
+        users.get(chatroom).remove(this);
+        sendMessageToAll(new Message("[Server]",username+" has left the room."));
+        this.chatroom=id;
+        users.get(chatroom).add(this);
     }
 
 }
