@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ClientHandler implements Runnable {
 
     //Variables
+    String username;
     private int chatroom;
     private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
     private Socket client;
@@ -20,15 +21,13 @@ public class ClientHandler implements Runnable {
      * @throws IOException When cant establish stream connection with client.
      */
     //Constructor, setting up communication streams
-    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom) throws IOException {
+    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom) throws IOException{
         this.client = clientSocket;
         this.users = users;
         this.chatroom=chatroom;
 
         inFromClient = new ObjectInputStream(client.getInputStream());
         outToClient = new ObjectOutputStream(client.getOutputStream());
-
-
     }
 
     /**
@@ -38,9 +37,15 @@ public class ClientHandler implements Runnable {
     @Override
     public void run() {
         try{
+            //Send message about new connection to chatroom
+            Message msg=(Message)inFromClient.readObject();
+            username=msg.getSender();
+            sendMessageToAll(new Message("[Server]",username+" joined!"));
+
+            //Main loop for broadcasting messages
             while(true){
-                //Listen for message and send it to all clients
-                Message msg = (Message)inFromClient.readObject();
+                //Listen for message and send it to all clients in your chatroom
+                msg = (Message)inFromClient.readObject();
                 System.out.println(msg.getSender()+" sent: " + msg.getContent());
                 sendMessageToAll(msg);
             }

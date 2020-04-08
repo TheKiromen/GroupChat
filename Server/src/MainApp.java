@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -13,8 +15,7 @@ public class MainApp {
 
     //Variables
     private ConcurrentHashMap<Integer, ArrayList<ClientHandler>> chatrooms = new ConcurrentHashMap<Integer, ArrayList<ClientHandler>>();
-    //private ArrayList<ClientHandler> users = new ArrayList<>();
-    private ExecutorService pool = Executors.newFixedThreadPool(5);
+    private ExecutorService pool = Executors.newFixedThreadPool(10);
     private ServerSocket server;
     private ClientHandler clientThread;
 
@@ -31,9 +32,11 @@ public class MainApp {
         try {
             //Server setup
             server = new ServerSocket(6789);
+
+            //Create global chatroom
             chatrooms.put(1,new ArrayList<ClientHandler>());
 
-            //\/ Comment to disable infinite loop warning
+            //\/ Comment for Intellij to disable infinite loop warning
             //noinspection InfiniteLoopStatement
             while(true){
 

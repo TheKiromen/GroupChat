@@ -42,6 +42,10 @@ public class MainApp {
             //Frame to get username from client
             username = JOptionPane.showInputDialog("Enter your username");
 
+            //Send your nickname to server
+            outToServer.writeObject(new Message(username,""));
+            outToServer.flush();
+
             System.out.println("Type a message:");
 
             //Main loop for inputs
