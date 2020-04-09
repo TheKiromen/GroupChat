@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -32,6 +30,8 @@ public class MainApp {
         try {
             //Server setup
             server = new ServerSocket(6789);
+
+            new ServerFrame();
 
             //Create global chatroom
             chatrooms.put(1,new ArrayList<ClientHandler>());
