@@ -10,7 +10,6 @@ public class ServerFrame extends JFrame {
     //\/ These are managed by Intellij's GUI designer
     //Components
     private JPanel serverPanel;
-    private JButton serverButton;
     private JTextArea console;
     private JLabel serverStatus;
     private JLabel status;
@@ -18,9 +17,15 @@ public class ServerFrame extends JFrame {
     private JLabel port;
     private MyButton myButton1;
 
+    //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
+
+    //Borders
     private Border spacing = BorderFactory.createEmptyBorder(50, 0, 0, 0);
+
+    //Variables
+    private boolean isRunning = false;
 
     public ServerFrame() {
 
@@ -42,19 +47,42 @@ public class ServerFrame extends JFrame {
     //Set up Java components
     private void setUpComponents() {
 
-        //Button setup
-        serverButton.setBackground(Color.getHSBColor(0, 0.01f, 0.20f));
-        serverButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
-        serverButton.setBorder(BorderFactory.createRaisedBevelBorder());
-        serverButton.setFocusable(false);
-        serverButton.setFont(componentsFont);
-
         //TextArea setup
         console.setFont(textAreaFont);
         console.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         console.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         console.setCaretColor(Color.WHITE);
+        console.setEditable(false);
 
+        myButton1.setText("Start Server");
+        myButton1.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
+        myButton1.setFont(componentsFont);
+        myButton1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(isRunning){
+                    //Button
+                    console.append("Server is shutting down... \n");
+                    myButton1.setText("Start Server");
+
+                    //Status label
+                    status.setText("Offline");
+                    status.setForeground(Color.RED);
+
+                    isRunning=false;
+                }else{
+                    //Button
+                    console.append("Server starting... \n");
+                    myButton1.setText("Stop Server");
+
+                    //Status label
+                    status.setText("Online");
+                    status.setForeground(Color.GREEN);
+
+                    isRunning=true;
+                }
+            }
+        });
 
         //Labels setup
         serverStatus.setBorder(spacing);
@@ -72,16 +100,9 @@ public class ServerFrame extends JFrame {
 
     //Create and setup custom components
     private void createUIComponents(){
-        myButton1 = new MyButton("Witam");
+        myButton1 = new MyButton();
         myButton1.setContentAreaFilled(false);
         myButton1.setFocusable(false);
-        myButton1.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
-        myButton1.setFont(new Font("Arial",Font.BOLD,16));
-        myButton1.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                console.append("Click \n");
-            }
-        });
+
     }
 }
