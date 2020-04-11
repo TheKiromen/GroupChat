@@ -2,6 +2,8 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class ServerFrame extends JFrame {
 
@@ -37,6 +39,7 @@ public class ServerFrame extends JFrame {
 
     }
 
+    //Set up Java components
     private void setUpComponents() {
 
         //Button setup
@@ -50,6 +53,7 @@ public class ServerFrame extends JFrame {
         console.setFont(textAreaFont);
         console.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         console.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        console.setCaretColor(Color.WHITE);
 
 
         //Labels setup
@@ -66,11 +70,18 @@ public class ServerFrame extends JFrame {
 
     }
 
+    //Create and setup custom components
     private void createUIComponents(){
         myButton1 = new MyButton("Witam");
         myButton1.setContentAreaFilled(false);
         myButton1.setFocusable(false);
         myButton1.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         myButton1.setFont(new Font("Arial",Font.BOLD,16));
+        myButton1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                console.append("Click \n");
+            }
+        });
     }
 }
