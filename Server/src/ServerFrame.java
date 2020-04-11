@@ -14,6 +14,7 @@ public class ServerFrame extends JFrame {
     private JLabel status;
     private JLabel ip;
     private JLabel port;
+    private MyButton myButton1;
 
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
@@ -63,5 +64,11 @@ public class ServerFrame extends JFrame {
         port.setFont(componentsFont);
         port.setBorder(spacing);
 
+    }
+
+    private void createUIComponents(){
+        myButton1 = new MyButton("Witam");
+        myButton1.setContentAreaFilled(false);
+        myButton1.setFocusable(false);
     }
 }

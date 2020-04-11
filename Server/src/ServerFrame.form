@@ -12,7 +12,7 @@
     <children>
       <scrollpane id="cb85b">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="20" left="0" bottom="20" right="20" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
@@ -104,6 +104,17 @@
           </component>
         </children>
       </grid>
+      <component id="a95e6" class="MyButton" binding="myButton1" custom-create="true" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <preferredSize width="160" height="70"/>
+          <text value="Test"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
