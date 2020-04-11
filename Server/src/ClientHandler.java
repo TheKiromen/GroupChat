@@ -14,6 +14,8 @@ public class ClientHandler implements Runnable {
     private ObjectInputStream inFromClient;
     private ObjectOutputStream outToClient;
 
+    private ServerFrame frame;
+
 
     /**
      * Creates new thread responsible for communication with specified client
@@ -22,10 +24,11 @@ public class ClientHandler implements Runnable {
      * @throws IOException When cant establish stream connection with client.
      */
     //Constructor, setting up communication streams
-    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom) throws IOException{
+    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom,ServerFrame f) throws IOException{
         this.client = clientSocket;
         this.users = users;
         this.chatroom=chatroom;
+        this.frame=f;
 
         inFromClient = new ObjectInputStream(client.getInputStream());
         outToClient = new ObjectOutputStream(client.getOutputStream());
@@ -49,11 +52,11 @@ public class ClientHandler implements Runnable {
                 input=inFromClient.readObject();
                 try {
                     msg=(Message)input;
-                    System.out.println(msg.getSender()+" sent: " + msg.getContent());
+                    frame.writeToConsole(msg.getSender()+" sent: " + msg.getContent());
                     sendMessageToAll(msg);
                 }catch(ClassCastException ex){
                     Request r = (Request)input;
-                    System.out.println(username+" sent new request: "+r.getType());
+                    frame.writeToConsole(username+" sent new request: "+r.getType());
                     changeChatroom(r.getId());
                     sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
                 }
