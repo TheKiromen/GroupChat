@@ -70,5 +70,7 @@ public class ServerFrame extends JFrame {
         myButton1 = new MyButton("Witam");
         myButton1.setContentAreaFilled(false);
         myButton1.setFocusable(false);
+        myButton1.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
+        myButton1.setFont(new Font("Arial",Font.BOLD,16));
     }
 }
