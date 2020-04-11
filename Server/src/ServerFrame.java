@@ -15,18 +15,17 @@ public class ServerFrame extends JFrame {
     private JLabel ip;
     private JLabel port;
 
+    private Font componentsFont = new Font("Arial", Font.BOLD, 16);
+    private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
+    private Border spacing = BorderFactory.createEmptyBorder(50, 0, 0, 0);
 
-    private Font componentsFont = new Font("Arial",Font.BOLD,16);
-    private Font textAreaFont = new Font("Arial",Font.PLAIN,14);
-    private Border spacing = BorderFactory.createEmptyBorder(50,0,0,0);
-
-    public ServerFrame(){
+    public ServerFrame() {
 
         //Components Setup
         setUpComponents();
         add(serverPanel);
-        setSize(820,614);
-        setMinimumSize(new Dimension(820,614));
+        setSize(820, 614);
+        setMinimumSize(new Dimension(820, 614));
 
         //Frame setup
         setTitle("Server Application");
@@ -37,16 +36,19 @@ public class ServerFrame extends JFrame {
 
     }
 
-    private void setUpComponents(){
+    private void setUpComponents() {
 
         //Button setup
-        serverButton.setBackground(Color.WHITE);
-        serverButton.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
+        serverButton.setBackground(Color.getHSBColor(0, 0.01f, 0.20f));
+        serverButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
+        serverButton.setBorder(BorderFactory.createRaisedBevelBorder());
+        serverButton.setFocusable(false);
         serverButton.setFont(componentsFont);
-
 
         //TextArea setup
         console.setFont(textAreaFont);
+        console.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
+        console.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 
 
         //Labels setup
@@ -60,6 +62,6 @@ public class ServerFrame extends JFrame {
 
         port.setFont(componentsFont);
         port.setBorder(spacing);
-    }
 
+    }
 }
