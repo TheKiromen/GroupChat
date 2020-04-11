@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -15,7 +14,7 @@ public class ServerFrame extends JFrame {
     private JLabel status;
     private JLabel ip;
     private JLabel port;
-    private MyButton myButton1;
+    private MyButton mainButton;
 
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
@@ -54,16 +53,19 @@ public class ServerFrame extends JFrame {
         console.setCaretColor(Color.WHITE);
         console.setEditable(false);
 
-        myButton1.setText("Start Server");
-        myButton1.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
-        myButton1.setFont(componentsFont);
-        myButton1.addMouseListener(new MouseAdapter() {
+        //Button setup
+        mainButton.setText("Start Server");
+        mainButton.setPreferredSize(new Dimension(150,60));
+        mainButton.setMinimumSize(new Dimension(150,60));
+        mainButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
+        mainButton.setFont(componentsFont);
+        mainButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(isRunning){
                     //Button
                     console.append("Server is shutting down... \n");
-                    myButton1.setText("Start Server");
+                    mainButton.setText("Start Server");
 
                     //Status label
                     status.setText("Offline");
@@ -73,7 +75,7 @@ public class ServerFrame extends JFrame {
                 }else{
                     //Button
                     console.append("Server starting... \n");
-                    myButton1.setText("Stop Server");
+                    mainButton.setText("Stop Server");
 
                     //Status label
                     status.setText("Online");
@@ -100,9 +102,9 @@ public class ServerFrame extends JFrame {
 
     //Create and setup custom components
     private void createUIComponents(){
-        myButton1 = new MyButton();
-        myButton1.setContentAreaFilled(false);
-        myButton1.setFocusable(false);
+        mainButton = new MyButton();
+        mainButton.setContentAreaFilled(false);
+        mainButton.setFocusable(false);
 
     }
 }

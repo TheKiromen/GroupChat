@@ -85,7 +85,7 @@
               <text value="Server port: 6789"/>
             </properties>
           </component>
-          <component id="a95e6" class="MyButton" binding="myButton1" custom-create="true" default-binding="true">
+          <component id="a95e6" class="MyButton" binding="mainButton" custom-create="true">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="60"/>
