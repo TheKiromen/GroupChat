@@ -9,8 +9,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static java.lang.Thread.*;
 
-public class MainApp {
+
+public class MainApp implements Runnable{
 
     //TODO Make chatrooms, ability to change your room.
 
@@ -22,9 +24,13 @@ public class MainApp {
 
     private ServerFrame frame;
 
-    public static void main(String[] args){
-        MainApp app = new MainApp();
-        app.run();
+//    public static void main(String[] args){
+//        MainApp app = new MainApp();
+//        app.run();
+//    }
+
+    MainApp(ServerFrame s){
+        this.frame=s;
     }
 
 
@@ -32,24 +38,24 @@ public class MainApp {
      * Creates server socket, accepts incoming client connections until you shut down server.
      * Creates new Thread responsible for communication for every client and runs it.
      */
-    private void run(){
-        frame = new ServerFrame();
-        frame.mainButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                if(frame.isRunning){
-                    frame.mainButton.setText("Start Server");
-                    frame.status.setText("Offline");
-                    frame.status.setForeground(Color.RED);
-                    frame.isRunning=false;
-                }else{
-                    frame.mainButton.setText("Stop Server");
-                    frame.status.setText("Online");
-                    frame.status.setForeground(Color.GREEN);
-                    frame.isRunning=true;
-                }
-            }
-        });
+    public void run(){
+//        frame = new ServerFrame();
+//        frame.mainButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if(frame.isRunning){
+//                    frame.mainButton.setText("Start Server");
+//                    frame.status.setText("Offline");
+//                    frame.status.setForeground(Color.RED);
+//                    frame.isRunning=false;
+//                }else{
+//                    frame.mainButton.setText("Stop Server");
+//                    frame.status.setText("Online");
+//                    frame.status.setForeground(Color.GREEN);
+//                    frame.isRunning=true;
+//                }
+//            }
+//        });
         try {
 
             //Server setup
@@ -77,6 +83,7 @@ public class MainApp {
             }
         }
         catch (IOException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
     }

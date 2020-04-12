@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Server/src/MainThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/RequestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ServerListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/ServerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ServerFrame.java" afterDir="false" />
     </list>
@@ -92,10 +81,10 @@
     </state>
     <state x="-1147" y="381" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586635392624" />
     <state x="618" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586045898433" />
-    <state x="-1234" y="212" key="FileChooserDialogImpl" timestamp="1586634398869">
+    <state x="-1234" y="212" key="FileChooserDialogImpl" timestamp="1586715052035">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1234" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586634398869" />
+    <state x="-1234" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586715052035" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586045857731" />
     <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1586637177606">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -121,10 +110,10 @@
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586637177606" />
     <state width="1493" height="246" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046759244" />
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586009165113" />
-    <state x="-1339" y="300" key="com.intellij.ide.util.TipDialog" timestamp="1586634377121">
+    <state x="-1339" y="300" key="com.intellij.ide.util.TipDialog" timestamp="1586714952068">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1339" y="300" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586634377121" />
+    <state x="-1339" y="300" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586714952068" />
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586045851775" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1586046756935">
       <screen x="0" y="0" width="1536" height="824" />

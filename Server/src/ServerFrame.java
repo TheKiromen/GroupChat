@@ -1,8 +1,12 @@
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ServerFrame extends JFrame {
 
@@ -25,8 +29,18 @@ public class ServerFrame extends JFrame {
 
     //Variables
     public boolean isRunning = false;
+    private ServerFrame frame;
+
+
+    public static void main(String[] args) {
+        new ServerFrame();
+    }
+
+    ExecutorService ex = Executors.newSingleThreadExecutor();
 
     public ServerFrame() {
+
+        frame=this;
 
         //Components Setup
         setUpComponents();
@@ -59,34 +73,36 @@ public class ServerFrame extends JFrame {
         mainButton.setMinimumSize(new Dimension(150,60));
         mainButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         mainButton.setFont(componentsFont);
-//        mainButton.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseClicked(MouseEvent e) {
-//                if(isRunning){
-//                    isRunning=false;
-//
-//                    //Button
-//                    console.append("Server is shutting down... \n");
-//                    mainButton.setText("Start Server");
-//
-//                    //Status label
-//                    status.setText("Offline");
-//                    status.setForeground(Color.RED);
-//
-//                }else{
-//                    isRunning=true;
-//
-//                    //Button
-//                    console.append("Server starting... \n");
-//                    mainButton.setText("Stop Server");
-//
-//                    //Status label
-//                    status.setText("Online");
-//                    status.setForeground(Color.GREEN);
-//
-//                }
-//            }
-//        });
+        mainButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(isRunning){
+                    isRunning=false;
+
+                    //Button
+                    console.append("Server is shutting down... \n");
+                    mainButton.setText("Start Server");
+
+                    //Status label
+                    status.setText("Offline");
+                    status.setForeground(Color.RED);
+
+                }else{
+                    isRunning=true;
+
+                    //Button
+                    console.append("Server starting... \n");
+                    mainButton.setText("Stop Server");
+
+                    //Status label
+                    status.setText("Online");
+                    status.setForeground(Color.GREEN);
+
+                    ex.execute(new MainApp(frame));
+
+                }
+            }
+        });
 
         //Labels setup
         serverStatus.setBorder(spacing);
