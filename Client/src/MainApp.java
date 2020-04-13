@@ -7,8 +7,6 @@ import javax.swing.*;
 
 public class MainApp {
 
-    //TODO Changing chatrooms
-
     //Variables
     private Scanner input = new Scanner(System.in);
     private String message,username;
@@ -16,6 +14,14 @@ public class MainApp {
     private ObjectOutputStream outToServer;
     private Socket connection;
     private ServerListener listeningThread;
+
+
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //TODO - Make GUI
+    //TODO - Connect GUI to app
+    //TODO - Improve error handling
+    //TODO - Improve user connecting and disconnecting
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
     public static void main(String args[]){

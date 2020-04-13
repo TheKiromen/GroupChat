@@ -1,5 +1,3 @@
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -12,13 +10,14 @@ public class ServerFrame extends JFrame {
 
     //\/ These are managed by Intellij's GUI designer
     //Components
+    private MyButton mainButton;
     private JPanel serverPanel;
     private JTextArea console;
     private JLabel serverStatus;
-    public JLabel status;
+    private JLabel status;
     private JLabel ip;
     private JLabel port;
-    public MyButton mainButton;
+
 
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
@@ -30,13 +29,19 @@ public class ServerFrame extends JFrame {
     //Variables
     public boolean isRunning = false;
     private ServerFrame frame;
-
+    private ExecutorService ex = Executors.newSingleThreadExecutor();
 
     public static void main(String[] args) {
         new ServerFrame();
     }
 
-    ExecutorService ex = Executors.newSingleThreadExecutor();
+
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //TODO - Improve error handling
+    //TODO - Custom disconnection dialog?
+    //TODO - Improve user disconnection handling.
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
     public ServerFrame() {
 
@@ -73,20 +78,40 @@ public class ServerFrame extends JFrame {
         mainButton.setMinimumSize(new Dimension(150,60));
         mainButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         mainButton.setFont(componentsFont);
+
+        //Button behavior
         mainButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                //Stop server
                 if(isRunning){
-                    isRunning=false;
+                    int result = JOptionPane.showConfirmDialog(frame,"Do you really want to shut down the Server?","Server Shutdown!",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+                    if(result==0){
+                        isRunning=false;
 
-                    //Button
-                    console.append("Server is shutting down... \n");
-                    mainButton.setText("Start Server");
+                        //Button
+                        console.append("Server is shutting down... \n");
+                        mainButton.setText("Start Server");
+                        mainButton.setEnabled(false);
 
-                    //Status label
-                    status.setText("Offline");
-                    status.setForeground(Color.RED);
+                        //Status label
+                        status.setText("Offline");
+                        status.setForeground(Color.RED);
 
+                        //Close program after delay
+                        SwingUtilities.invokeLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(1000);
+                                    System.exit(0);
+                                } catch (InterruptedException exc) {
+                                    exc.printStackTrace();
+                                }
+                            }
+                        });
+                    }
+                //Start Server
                 }else{
                     isRunning=true;
 
@@ -98,6 +123,7 @@ public class ServerFrame extends JFrame {
                     status.setText("Online");
                     status.setForeground(Color.GREEN);
 
+                    //Start main Thread
                     ex.execute(new MainApp(frame));
 
                 }
@@ -105,14 +131,17 @@ public class ServerFrame extends JFrame {
         });
 
         //Labels setup
+        //Status label
         serverStatus.setBorder(spacing);
         serverStatus.setFont(componentsFont);
         status.setFont(componentsFont);
         status.setForeground(Color.RED);
 
+        //Ip label
         ip.setFont(componentsFont);
         ip.setBorder(spacing);
 
+        //Port label
         port.setFont(componentsFont);
         port.setBorder(spacing);
 
@@ -125,10 +154,7 @@ public class ServerFrame extends JFrame {
         mainButton.setFocusable(false);
     }
 
-    public boolean getStatus(){
-        return isRunning;
-    }
-
+    //Write text to textArea
     public void writeToConsole(String text){
         console.append(text+"\n");
     }

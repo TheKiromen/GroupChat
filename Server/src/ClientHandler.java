@@ -37,6 +37,7 @@ public class ClientHandler implements Runnable {
     /**
      * Main method responsible for receiving and sending messages.
      * Sends received message to all users in chatroom.
+     * Also responsible for handling user requests.
      */
     @Override
     public void run() {
@@ -51,10 +52,12 @@ public class ClientHandler implements Runnable {
                 //Listen for message and send it to all clients in your chatroom
                 input=inFromClient.readObject();
                 try {
+                    //If incoming Object is a message, broadcast it.
                     msg=(Message)input;
-                    frame.writeToConsole(msg.getSender()+" sent: " + msg.getContent());
+                    frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom "+chatroom);
                     sendMessageToAll(msg);
                 }catch(ClassCastException ex){
+                    //If incoming Object is a request, handle it according to its type.
                     Request r = (Request)input;
                     frame.writeToConsole(username+" sent new request: "+r.getType());
                     changeChatroom(r.getId());
@@ -63,7 +66,11 @@ public class ClientHandler implements Runnable {
             }
         }
         catch(IOException | ClassNotFoundException e){
+            //Temporary disconnection handling
+            //TODO disconnect() method to show message and delete user from array's
+            //TODO more advanced error handling
             System.err.println(e.getMessage());
+            frame.writeToConsole(username+" disconnected.");
         }//Cleanup
         finally{
             try {
@@ -98,7 +105,13 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    public void changeChatroom(int id) throws IOException {
+    /**
+     * Change chatroom user is connected to.
+     * @param id Id of your target chatroom.
+     * @throws IOException When stream error occurs.
+     */
+    //Method for changing chatroom
+    private void changeChatroom(int id) throws IOException {
         users.get(chatroom).remove(this);
         sendMessageToAll(new Message("[Server]",username+" has left the room."));
         this.chatroom=id;
