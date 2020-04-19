@@ -7,8 +7,6 @@ import javax.swing.*;
 
 public class MainApp {
 
-    //TODO Changing chatrooms
-
     //Variables
     private Scanner input = new Scanner(System.in);
     private String message,username;
@@ -16,6 +14,14 @@ public class MainApp {
     private ObjectOutputStream outToServer;
     private Socket connection;
     private ServerListener listeningThread;
+
+
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //TODO - Make GUI
+    //TODO - Connect GUI to app
+    //TODO - Improve error handling
+    //TODO - Improve user connecting and disconnecting
+    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
     public static void main(String args[]){
@@ -42,6 +48,10 @@ public class MainApp {
             //Frame to get username from client
             username = JOptionPane.showInputDialog("Enter your username");
 
+            //Send your nickname to server
+            outToServer.writeObject(new Message(username,""));
+            outToServer.flush();
+
             System.out.println("Type a message:");
 
             //Main loop for inputs
@@ -51,6 +61,9 @@ public class MainApp {
                 message = input.nextLine();
                 if(message.equals("")){
                     break;
+                }else if(message.equals("switch2")){
+                    outToServer.writeObject(new Request(RequestType.CHATROOM_CHANGE,2));
+                    outToServer.flush();
                 }else{
                     Message msg = new Message(username,message);
                     outToServer.writeObject(msg);

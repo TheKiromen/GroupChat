@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ServerFrame">
+  <grid id="27dc6" binding="serverPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="698" height="450"/>
+    </constraints>
+    <properties>
+      <background color="-12961229"/>
+      <foreground color="-12566464"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <scrollpane id="cb85b">
+        <constraints>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="20" left="0" bottom="20" right="20" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <horizontalScrollBarPolicy value="31"/>
+          <verticalScrollBarPolicy value="22"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="618c6" class="javax.swing.JTextArea" binding="console">
+            <constraints/>
+            <properties>
+              <background color="-13422030"/>
+              <caretColor color="-8092540"/>
+              <disabledTextColor color="-4665371"/>
+              <dragEnabled value="false"/>
+              <foreground color="-1406188"/>
+              <lineWrap value="true"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-12037782"/>
+              <wrapStyleWord value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <grid id="2afca" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="20" left="20" bottom="20" right="20"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <background color="-12961229"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="67889" class="javax.swing.JLabel" binding="serverStatus">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12828863"/>
+              <foreground color="-2500136"/>
+              <text value="Server Status:"/>
+            </properties>
+          </component>
+          <component id="f551d" class="javax.swing.JLabel" binding="status">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-12828863"/>
+              <text value="Offline"/>
+            </properties>
+          </component>
+          <component id="3c58" class="javax.swing.JLabel" binding="ip">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-2500136"/>
+              <text value="Server IP: 127.0.0.1"/>
+            </properties>
+          </component>
+          <component id="29325" class="javax.swing.JLabel" binding="port">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-2500136"/>
+              <text value="Server port: 6789"/>
+            </properties>
+          </component>
+          <component id="a95e6" class="MyButton" binding="mainButton" custom-create="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="60"/>
+              </grid>
+            </constraints>
+            <properties>
+              <margin top="0" left="0" bottom="0" right="0"/>
+              <preferredSize width="160" height="70"/>
+              <text value="Start Server"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
