@@ -15,6 +15,8 @@ public class MainApp {
     private Socket connection;
     private ServerListener listeningThread;
 
+    private UsernameFrame inputFrame;
+
 
     //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //TODO - Make GUI
@@ -46,7 +48,10 @@ public class MainApp {
             pool.execute(listeningThread);
 
             //Frame to get username from client
-            username = JOptionPane.showInputDialog("Enter your username");
+            inputFrame = new UsernameFrame();
+            username = inputFrame.getName();
+
+          //  username = JOptionPane.showInputDialog("Enter your username");
 
             //Send your nickname to server
             outToServer.writeObject(new Message(username,""));

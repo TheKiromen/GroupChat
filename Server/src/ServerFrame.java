@@ -31,6 +31,8 @@ public class ServerFrame extends JFrame {
     private ServerFrame frame;
     private ExecutorService ex = Executors.newSingleThreadExecutor();
 
+    private ShutDown message;
+
     public static void main(String[] args) {
         new ServerFrame();
     }
@@ -85,7 +87,9 @@ public class ServerFrame extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 //Stop server
                 if(isRunning){
-                    int result = JOptionPane.showConfirmDialog(frame,"Do you really want to shut down the Server?","Server Shutdown!",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+                    message = new ShutDown();
+                    int result=message.getResult();
+                    //int result = JOptionPane.showConfirmDialog(frame,"Do you really want to shut down the Server?","Server Shutdown!",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
                     if(result==0){
                         isRunning=false;
 
