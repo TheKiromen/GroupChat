@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -6,8 +7,8 @@ import java.awt.event.MouseEvent;
 public class ShutDown extends JFrame {
 
     private JLabel questionLabel;
-    private JButton yesButton;
-    private JButton noButton;
+    private MyButton yesButton;
+    private MyButton noButton;
     private JPanel ShutDown;
     private int result=2;
 
@@ -18,8 +19,8 @@ public class ShutDown extends JFrame {
 
         setUpComponents();
         add(ShutDown);
-        setSize(400, 120);
-        setMinimumSize(new Dimension(400, 120));
+        setSize(400, 180);
+        setMinimumSize(new Dimension(400, 180));
 
         setTitle("WARNING: Server shutdown!");
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -48,6 +49,7 @@ public class ShutDown extends JFrame {
 
         questionLabel.setFont(componentsFont);
         questionLabel.setForeground(fg);
+        questionLabel.setBorder(BorderFactory.createEmptyBorder(0,0,30,0));
 
         //YesButton setup
         yesButton.setForeground(fg);
@@ -63,5 +65,16 @@ public class ShutDown extends JFrame {
         noButton.setBorder(BorderFactory.createRaisedBevelBorder());
         noButton.setFont(componentsFont);
 
+    }
+
+    //Create and setup custom components
+    private void createUIComponents(){
+        yesButton = new MyButton();
+        yesButton.setContentAreaFilled(false);
+        yesButton.setFocusable(false);
+
+        noButton = new MyButton();
+        noButton.setContentAreaFilled(false);
+        noButton.setFocusable(false);
     }
 }
