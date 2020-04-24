@@ -3,9 +3,8 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import javax.swing.*;
 
-public class MainApp {
+public class MainApp implements Runnable{
 
     //Variables
     private Scanner input = new Scanner(System.in);
@@ -26,16 +25,16 @@ public class MainApp {
     //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-    public static void main(String args[]){
-        MainApp app = new MainApp();
-        app.run();
+    public MainApp(String username){
+        this.username=username;
     }
+
 
     /**
      * Main method responsible for connecting to server and sending messages.
      * Currently connected to localhost but later in development you will get to choose ip.
      */
-    private void run(){
+    public void run(){
         try {
             //Connecting to server
             connection = new Socket("127.0.0.1",6789);
@@ -46,12 +45,6 @@ public class MainApp {
             //Create and run thread for listening for messages
             listeningThread = new ServerListener(connection);
             pool.execute(listeningThread);
-
-            //Frame to get username from client
-            inputFrame = new UsernameFrame();
-            username = inputFrame.getName();
-
-          //  username = JOptionPane.showInputDialog("Enter your username");
 
             //Send your nickname to server
             outToServer.writeObject(new Message(username,""));
