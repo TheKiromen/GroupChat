@@ -14,7 +14,7 @@ public class ShutDown extends JFrame {
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Color fg= new Color(217, 208, 195);
 
-    public ShutDown() {
+    public ShutDown(ServerFrame f) {
 
         setUpComponents();
         add(ShutDown);
@@ -22,7 +22,7 @@ public class ShutDown extends JFrame {
         setMinimumSize(new Dimension(400, 120));
 
         setTitle("WARNING: Server shutdown!");
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -30,17 +30,14 @@ public class ShutDown extends JFrame {
         yesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                result=1;
-                result=getResult();
+                f.shutDown();
+                dispose();
             }
         });
         noButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                result=0;
-                result=getResult();
+                dispose();
             }
         });
     }

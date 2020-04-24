@@ -87,34 +87,9 @@ public class ServerFrame extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 //Stop server
                 if(isRunning){
-                    message = new ShutDown();
-                    int result=message.getResult();
-                    //int result = JOptionPane.showConfirmDialog(frame,"Do you really want to shut down the Server?","Server Shutdown!",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
-                    if(result==0){
-                        isRunning=false;
 
-                        //Button
-                        console.append("Server is shutting down... \n");
-                        mainButton.setText("Start Server");
-                        mainButton.setEnabled(false);
+                    new ShutDown(frame);
 
-                        //Status label
-                        status.setText("Offline");
-                        status.setForeground(Color.RED);
-
-                        //Close program after delay
-                        SwingUtilities.invokeLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    Thread.sleep(1000);
-                                    System.exit(0);
-                                } catch (InterruptedException exc) {
-                                    exc.printStackTrace();
-                                }
-                            }
-                        });
-                    }
                 //Start Server
                 }else{
                     isRunning=true;
@@ -156,6 +131,32 @@ public class ServerFrame extends JFrame {
         mainButton = new MyButton();
         mainButton.setContentAreaFilled(false);
         mainButton.setFocusable(false);
+    }
+
+    public void shutDown(){
+        isRunning=false;
+
+        //Button
+        console.append("Server is shutting down... \n");
+        mainButton.setText("Start Server");
+        mainButton.setEnabled(false);
+
+        //Status label
+        status.setText("Offline");
+        status.setForeground(Color.RED);
+
+        //Close program after delay
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                    System.exit(0);
+                } catch (InterruptedException exc) {
+                    exc.printStackTrace();
+                }
+            }
+        });
     }
 
     //Write text to textArea
