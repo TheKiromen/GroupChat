@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 public class UsernameFrame extends JFrame {
     private JTextField textField;
-    private JButton connectButton;
+    private MyButton connectButton;
     private JLabel enterLabel;
     private JPanel inputPanel;
     private String name="default";
@@ -60,4 +60,10 @@ public class UsernameFrame extends JFrame {
         //connectButton.setBorder(spacing);
     }
 
+    //Create and setup custom components
+    private void createUIComponents(){
+        connectButton = new MyButton();
+        connectButton.setContentAreaFilled(false);
+        connectButton.setFocusable(false);
+    }
 }
