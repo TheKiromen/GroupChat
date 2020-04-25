@@ -22,6 +22,7 @@ public class MainApp implements Runnable{
     }
 
 
+
     /**
      * Creates server socket, accepts incoming client connections until you shut down server.
      * Creates new Thread responsible for communication for every client and runs it.

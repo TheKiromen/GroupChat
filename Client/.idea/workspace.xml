@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MyButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/META-INF/Client.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/MessageReciever.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/UsernameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UsernameFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsernameFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UsernameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsernameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/ServerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ServerFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +19,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="800" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectId" id="1YuGeuQxKAkWaUTlMXEf8Tl6GL6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,10 +41,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586041521701" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="256" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587662355256" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.UsernameFrame">
     <configuration name="MainApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -53,8 +56,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsernameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UsernameFrame" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Application.UsernameFrame" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UsernameFrame" />
         <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
@@ -73,49 +88,53 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586635400473">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587727304008">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586635400473" />
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046018992" />
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727304008" />
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1586012610809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586012610809" />
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state x="-1147" y="381" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586635392624">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="618" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587726560696">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1147" y="381" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586635392624" />
-    <state x="618" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586045898433" />
+    <state x="618" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587726560696" />
+    <state x="644" y="301" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff" timestamp="1587727566224">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="644" y="301" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727566224" />
     <state x="-1234" y="212" key="FileChooserDialogImpl" timestamp="1586791689718">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1234" y="212" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586791689718" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586045857731" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1586794325996">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1493" height="202" key="GridCell.Tab.0.bottom" timestamp="1587727903357">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586794325996" />
-    <state width="1493" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046759245" />
+    <state width="1493" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727903357" />
     <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1586794325995">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1493" height="202" key="GridCell.Tab.0.center" timestamp="1587727903357">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586794325995" />
-    <state width="1493" height="246" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046759244" />
+    <state width="1493" height="202" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727903357" />
     <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1586794325995">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1493" height="202" key="GridCell.Tab.0.left" timestamp="1587727903357">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586794325995" />
-    <state width="1493" height="246" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046759244" />
+    <state width="1493" height="202" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727903357" />
     <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586009165112" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1586794325995">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1493" height="202" key="GridCell.Tab.0.right" timestamp="1587727903357">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586794325995" />
-    <state width="1493" height="246" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586046759244" />
+    <state width="1493" height="202" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587727903357" />
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586009165113" />
     <state x="-1339" y="300" key="com.intellij.ide.util.TipDialog" timestamp="1586791665216">
       <screen x="-1920" y="0" width="1920" height="1040" />
