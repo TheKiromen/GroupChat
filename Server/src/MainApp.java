@@ -11,12 +11,12 @@ public class MainApp implements Runnable{
 
     //Variables
     private ConcurrentHashMap<Integer, ArrayList<ClientHandler>> chatrooms = new ConcurrentHashMap<Integer, ArrayList<ClientHandler>>();
-    private ExecutorService pool = Executors.newFixedThreadPool(10);
+    private ExecutorService pool = Executors.newCachedThreadPool();
     private ServerSocket server;
     private ClientHandler clientThread;
-
     private ServerFrame frame;
 
+    //Constructor
     MainApp(ServerFrame s){
         this.frame=s;
     }

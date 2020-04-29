@@ -13,7 +13,6 @@ public class ClientHandler implements Runnable {
     private Socket client;
     private ObjectInputStream inFromClient;
     private ObjectOutputStream outToClient;
-
     private ServerFrame frame;
 
 
@@ -65,13 +64,16 @@ public class ClientHandler implements Runnable {
                 }
             }
         }
-        catch(IOException | ClassNotFoundException e){
-            //Temporary disconnection handling
-            //TODO disconnect() method to show message and delete user from array's
-            //TODO more advanced error handling
-            System.err.println(e.getMessage());
+        //Handle user disconnection
+        catch(IOException e){
             frame.writeToConsole(username+" disconnected.");
-        }//Cleanup
+            users.get(chatroom).remove(this);
+        }
+        //Wrong object type
+        catch(ClassNotFoundException e){
+            System.err.println(e.getMessage());
+        }
+        //Cleanup
         finally{
             try {
                 inFromClient.close();

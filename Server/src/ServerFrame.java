@@ -31,20 +31,14 @@ public class ServerFrame extends JFrame {
     private ServerFrame frame;
     private ExecutorService ex = Executors.newSingleThreadExecutor();
 
-    private ShutDown message;
 
+    //-----------------------------MAIN METHOD-------------------------//
     public static void main(String[] args) {
         new ServerFrame();
     }
 
 
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    //TODO - Improve error handling
-    //TODO - Custom disconnection dialog?
-    //TODO - Improve user disconnection handling.
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
+    //Constructor
     public ServerFrame() {
 
         frame=this;
