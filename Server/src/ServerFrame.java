@@ -17,6 +17,7 @@ public class ServerFrame extends JFrame {
     private JLabel status;
     private JLabel ip;
     private JLabel port;
+    private JLabel authors;
 
 
     //Fonts
@@ -117,6 +118,10 @@ public class ServerFrame extends JFrame {
         //Port label
         port.setFont(componentsFont);
         port.setBorder(spacing);
+
+        //Authors label
+        authors.setFont(new Font("Arial",Font.PLAIN,12));
+        authors.setBorder(BorderFactory.createEmptyBorder(0,10,10,0));
 
     }
 
