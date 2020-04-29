@@ -46,7 +46,7 @@ public class MainApp implements Runnable{
 
                 //Listen for new connection
                 Socket connection = server.accept();
-                frame.writeToConsole("New client connected!");
+                //frame.writeToConsole("New client connected!");
 
                 //Create and run new thread for each client
                 clientThread = new ClientHandler(connection,chatrooms,1,frame);

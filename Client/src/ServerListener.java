@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
@@ -36,7 +37,8 @@ public class ServerListener implements Runnable {
 
         }//Exception when server closes
         catch(SocketException e){
-            System.err.println("Disconnected from the server.");
+            JOptionPane.showMessageDialog(null,"Interrupted connection");
+            System.exit(0);
         }
         catch (IOException e) {
             e.printStackTrace();

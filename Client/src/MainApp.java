@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.io.*;
+import java.net.ConnectException;
 import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -15,14 +17,6 @@ public class MainApp implements Runnable{
     private ServerListener listeningThread;
 
     private UsernameFrame inputFrame;
-
-
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    //TODO - Make GUI
-    //TODO - Connect GUI to app
-    //TODO - Improve error handling
-    //TODO - Improve user connecting and disconnecting
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
     public MainApp(String username){
@@ -70,12 +64,20 @@ public class MainApp implements Runnable{
             }
 
         }
+        //Handle if server is offline
+        catch(ConnectException e){
+            JOptionPane.showMessageDialog(null,"Server is offline.");
+            System.exit(0);
+        }
         catch (IOException e) {
             e.printStackTrace();
-        }//Cleanup
+        }
+        //Cleanup
         finally {
             try {
-                outToServer.close();
+                if(outToServer!=null){
+                    outToServer.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

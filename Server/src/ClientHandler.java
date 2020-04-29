@@ -44,6 +44,7 @@ public class ClientHandler implements Runnable {
             //Send message about new connection to chatroom
             Message msg=(Message)inFromClient.readObject();
             username=msg.getSender();
+            frame.writeToConsole(username+" connected.");
             sendMessageToAll(new Message("[Server]",username+" joined!"));
 
             //Main loop for broadcasting messages
