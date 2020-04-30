@@ -69,6 +69,11 @@ public class ClientHandler implements Runnable {
         catch(IOException e){
             frame.writeToConsole(username+" disconnected.");
             users.get(chatroom).remove(this);
+            try {
+                sendMessageToAll(new Message("[Server]",username+" disconnected."));
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
         //Wrong object type
         catch(ClassNotFoundException e){

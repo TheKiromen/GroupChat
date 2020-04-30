@@ -9,6 +9,7 @@ public class ServerListener implements Runnable {
     //Variables
     private Socket server;
     private ObjectInputStream inFromServer;
+    private ChatWindow frame;
 
     /**
      * Creates new thread with associated socket. Responsible for receiving messages from server.
@@ -16,8 +17,9 @@ public class ServerListener implements Runnable {
      * @throws IOException When cant establish connection stream with server.
      */
     //Constructor, setting up input stream from server
-    ServerListener(Socket sv) throws IOException {
+    ServerListener(Socket sv, ChatWindow f) throws IOException {
         this.server=sv;
+        this.frame=f;
         inFromServer = new ObjectInputStream(server.getInputStream());
     }
 
@@ -32,12 +34,12 @@ public class ServerListener implements Runnable {
             while(true){
                 //Read and print out message
                 Message msg = (Message)inFromServer.readObject();
-                System.out.println(msg.getSender()+": "+msg.getContent());
+                frame.writeToConsole(msg.getSender()+": "+msg.getContent());
             }
 
         }//Exception when server closes
         catch(SocketException e){
-            JOptionPane.showMessageDialog(null,"Interrupted connection");
+            JOptionPane.showMessageDialog(null,"Lost connection to the server");
             System.exit(0);
         }
         catch (IOException e) {

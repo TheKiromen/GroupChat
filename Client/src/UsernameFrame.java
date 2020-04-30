@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.concurrent.ExecutorService;
@@ -11,12 +13,12 @@ public class UsernameFrame extends JFrame {
     private MyButton connectButton;
     private JLabel enterLabel;
     private JPanel inputPanel;
+    private Action a = new Action();
 
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Color fg= new Color(217, 208, 195);
     private Border spacing = BorderFactory.createEmptyBorder(8, 8, 8, 8);
 
-    private ExecutorService mainThread = Executors.newSingleThreadExecutor();
 
     public static void main(String[] args) {
         new UsernameFrame();
@@ -35,15 +37,10 @@ public class UsernameFrame extends JFrame {
         setVisible(true);
 
 
-        connectButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                mainThread.execute(new MainApp(textField.getText()));
-                dispose();
-            }
-        });
+        connectButton.addActionListener(a);
 
-        new ChatWindow();
+        textField.addActionListener(a);
+
 
     }
 
@@ -59,7 +56,7 @@ public class UsernameFrame extends JFrame {
         connectButton.setForeground(fg);
         connectButton.setBackground(Color.getHSBColor(60, 0.12f, 0.22f));
         connectButton.setBorder(BorderFactory.createRaisedBevelBorder());
-        //connectButton.setBorder(spacing);
+
     }
 
     //Create and setup custom components
@@ -68,4 +65,14 @@ public class UsernameFrame extends JFrame {
         connectButton.setContentAreaFilled(false);
         connectButton.setFocusable(false);
     }
+
+    private class Action implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new ChatWindow(textField.getText());
+            dispose();
+        }
+    }
+
 }
