@@ -11,7 +11,6 @@ public class UsernameFrame extends JFrame {
     private MyButton connectButton;
     private JLabel enterLabel;
     private JPanel inputPanel;
-    private String name="default";
 
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Color fg= new Color(217, 208, 195);
@@ -43,6 +42,9 @@ public class UsernameFrame extends JFrame {
                 dispose();
             }
         });
+
+        new ChatWindow();
+
     }
 
     private void setUpComponents() {

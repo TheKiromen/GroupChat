@@ -7,11 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/UsernameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/UsernameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MyButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/RequestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +44,27 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="209" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ServerFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ShutDown.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,8 +77,45 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ServerFrame.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="800" />
+    <option name="width" value="800" />
+    <option name="height" value="860" />
+  </component>
   <component name="ProjectId" id="1YuGclrffM0oyEXGhkG0FEiADLc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -43,7 +126,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="250" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587257935259" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588207687657" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -60,6 +143,18 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Application.ServerFrame">
     <configuration name="MainApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
@@ -71,7 +166,7 @@
       </method>
     </configuration>
     <configuration name="ServerFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ServerFrame" />
       <module name="Server" />
@@ -111,6 +206,37 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="800" y="0" width="800" height="860" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20675676" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13873626" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587724412753">
@@ -199,5 +325,37 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Server$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1586340236843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerFrame.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShutDown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShutDown.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
   </component>
 </project>
