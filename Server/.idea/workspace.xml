@@ -7,31 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/ChatWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/ChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MyButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/RequestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

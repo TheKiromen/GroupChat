@@ -16,8 +16,6 @@ public class MainApp implements Runnable{
     private Socket connection;
     private ServerListener listeningThread;
 
-    private UsernameFrame inputFrame;
-
 
     public MainApp(String username){
         this.username=username;

@@ -1,10 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ChatWindow extends JFrame {
     private JPanel mainPanel;
     private JTextField inputField;
-    private JButton sendButton;
+    private MyButton sendButton;
     private JTextArea chatArea;
 
     private ChatWindow window;
@@ -41,19 +43,30 @@ public class ChatWindow extends JFrame {
         chatArea.setCaretColor(Color.WHITE);
         chatArea.setEditable(false);
 
-        //Button - improve!!!
+        //Button
         sendButton.setForeground(Color.getHSBColor(35, 0.01f, 0.85f));
         sendButton.setFont(componentsFont);
         sendButton.setFocusable(false);
-        sendButton.setBorder(BorderFactory.createRaisedBevelBorder());
+
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                window.writeToConsole("test");
+            }
+        });
+
 
         //InputField setup
         inputField.setCaretColor(Color.BLACK);
         inputField.setFont(textAreaFont);
 
+    }
 
+    private void createUIComponents(){
+        sendButton=new MyButton();
+        sendButton.setContentAreaFilled(false);
     }
 
     //Write text to textArea
-   // public void writeToConsole(String text){chatArea.append(text+"\n"); }
+    public void writeToConsole(String text){chatArea.append(text+"\n"); }
 }
