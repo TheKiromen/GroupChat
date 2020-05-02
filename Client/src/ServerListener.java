@@ -42,12 +42,11 @@ public class ServerListener implements Runnable {
             JOptionPane.showMessageDialog(null,"Lost connection to the server");
             System.exit(0);
         }
-        catch (IOException e) {
+        catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }//Cleanup
-        catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
+        finally {
+            //Close communication stream if its not already closed
             try {
                 inFromServer.close();
             } catch (IOException e) {

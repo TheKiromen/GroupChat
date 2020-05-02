@@ -9,19 +9,15 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Client side of simple chatroom chat application.
+ *
+ * @autor Monika Haracz, Dominik Kruczek
+ */
+
 public class ChatWindow extends JFrame {
 
-    //Variables
-    private ObjectOutputStream outToServer;
-    private String username;
-    private ExecutorService pool = Executors.newSingleThreadExecutor();
-    private Socket connection;
-    private ServerListener listeningThread;
-    private MessageSender sender = new MessageSender();
-    private Message msg;
-    private int chatroomID=1;
-
-    //GUI variables
+    //Component variables
     private JPanel mainPanel;
     private JTextField inputField;
     private MyButton sendButton;
@@ -35,6 +31,20 @@ public class ChatWindow extends JFrame {
     private Font statusFont = new Font("Arial",Font.PLAIN,12);
     private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
 
+    //Program Variables
+    private ObjectOutputStream outToServer;
+    private String username;
+    private ExecutorService pool = Executors.newSingleThreadExecutor();
+    private Socket connection;
+    private ServerListener listeningThread;
+    private MessageSender sender = new MessageSender();
+    private Message msg;
+    private int chatroomID=1;
+
+
+
+
+    //Constructor
     public ChatWindow(String user) {
 
         username=user;
@@ -57,6 +67,10 @@ public class ChatWindow extends JFrame {
 
     }
 
+
+    /**
+     * Configures components before adding them to frame.
+     */
     private void setUpComponents()
     {
        //ChatArea setup
@@ -86,11 +100,17 @@ public class ChatWindow extends JFrame {
         chatroom.setFont(statusFont);
     }
 
+    /**
+     * Initializes custom components
+     */
     private void createUIComponents(){
         sendButton=new MyButton();
         sendButton.setContentAreaFilled(false);
     }
 
+    /**
+     * Sets up connection with the server.
+     */
     private void setUpConnection(){
         try {
             //Connecting to server
@@ -119,15 +139,18 @@ public class ChatWindow extends JFrame {
         }
     }
 
-    //Write text to textArea
+    //Write text to chatArea
     public void writeToConsole(String text){chatArea.append(text+"\n"); }
 
-    private class MessageSender implements ActionListener{
 
+    //Internal class that defines button behavior
+    private class MessageSender implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
+            //Create new message
             msg=new Message(username,inputField.getText());
             try{
+                //Send message to server and clear input field
                 outToServer.writeObject(msg);
                 outToServer.flush();
                 inputField.setText("");

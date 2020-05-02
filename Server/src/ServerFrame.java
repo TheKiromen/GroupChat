@@ -8,8 +8,7 @@ import java.util.concurrent.Executors;
 
 public class ServerFrame extends JFrame {
 
-    //\/ These are managed by Intellij's GUI designer
-    //Components
+    //Component Variables
     private MyButton mainButton;
     private JPanel serverPanel;
     private JTextArea console;
@@ -19,7 +18,6 @@ public class ServerFrame extends JFrame {
     private JLabel port;
     private JLabel authors;
 
-
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
@@ -27,7 +25,7 @@ public class ServerFrame extends JFrame {
     //Borders
     private Border spacing = BorderFactory.createEmptyBorder(50, 0, 0, 0);
 
-    //Variables
+    //Program Variables
     public boolean isRunning = false;
     private ServerFrame frame;
     private ExecutorService ex = Executors.newSingleThreadExecutor();
@@ -59,6 +57,9 @@ public class ServerFrame extends JFrame {
 
     }
 
+    /**
+     * Configures components before adding them to frame.
+     */
     //Set up Java components
     private void setUpComponents() {
 
@@ -125,6 +126,9 @@ public class ServerFrame extends JFrame {
 
     }
 
+    /**
+     * Initialize custom components
+     */
     //Create and setup custom components
     private void createUIComponents(){
         mainButton = new MyButton();
@@ -132,6 +136,19 @@ public class ServerFrame extends JFrame {
         mainButton.setFocusable(false);
     }
 
+    /**
+     * Method to display text on server console
+     * @param text text you want to display
+     */
+    //Write text to textArea
+    public void writeToConsole(String text){
+        console.append(text+"\n");
+    }
+
+    /**
+     * Method to safely shut down the server
+     */
+    //Shut down the server
     public void shutDown(){
         isRunning=false;
 
@@ -158,9 +175,6 @@ public class ServerFrame extends JFrame {
         });
     }
 
-    //Write text to textArea
-    public void writeToConsole(String text){
-        console.append(text+"\n");
-    }
+
 
 }
