@@ -30,6 +30,7 @@ public class ChatWindow extends JFrame {
 
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
+    private Font statusFont = new Font("Arial",Font.PLAIN,12);
     private Font textAreaFont = new Font("Arial", Font.PLAIN, 14);
 
     public ChatWindow(String user) {
@@ -77,7 +78,7 @@ public class ChatWindow extends JFrame {
 
         //User label
         user.setText("Connected as: "+username);
-        user.setFont(componentsFont);
+        user.setFont(statusFont);
     }
 
     private void createUIComponents(){

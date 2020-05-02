@@ -62,7 +62,7 @@
         <properties>
           <background color="-4473925"/>
           <foreground color="-2500135"/>
-          <text value="Label"/>
+          <text value="user"/>
         </properties>
       </component>
     </children>
