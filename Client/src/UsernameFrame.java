@@ -7,6 +7,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UsernameFrame extends JFrame {
     private JTextField textField;
@@ -18,6 +20,9 @@ public class UsernameFrame extends JFrame {
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
     private Color fg= new Color(217, 208, 195);
     private Border spacing = BorderFactory.createEmptyBorder(8, 8, 8, 8);
+
+    private Pattern regex = Pattern.compile("^[a-zA-Z0-9]*$");
+    private Matcher matcher;
 
 
     public static void main(String[] args) {
@@ -70,8 +75,18 @@ public class UsernameFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            new ChatWindow(textField.getText());
-            dispose();
+            String tmp=textField.getText();
+            matcher=regex.matcher(tmp);
+            if(tmp.length()>=4 && tmp.length()<=20){
+                if(matcher.matches()){
+                    new ChatWindow(textField.getText());
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null,"Username can contain only letters and numbers.");
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Username should be 4 to 20 characters long.");
+            }
         }
     }
 

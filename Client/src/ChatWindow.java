@@ -19,6 +19,7 @@ public class ChatWindow extends JFrame {
     private ServerListener listeningThread;
     private MessageSender sender = new MessageSender();
     private Message msg;
+    private int chatroomID=1;
 
     //GUI variables
     private JPanel mainPanel;
@@ -26,6 +27,7 @@ public class ChatWindow extends JFrame {
     private MyButton sendButton;
     private JTextArea chatArea;
     private JLabel user;
+    private JLabel chatroom;
     private ChatWindow frame;
 
     //Fonts
@@ -76,9 +78,12 @@ public class ChatWindow extends JFrame {
         inputField.setFont(textAreaFont);
         inputField.addActionListener(sender);
 
-        //User label
+        //Status labels
         user.setText("Connected as: "+username);
         user.setFont(statusFont);
+
+        chatroom.setText("Chatroom ID: "+chatroomID);
+        chatroom.setFont(statusFont);
     }
 
     private void createUIComponents(){
