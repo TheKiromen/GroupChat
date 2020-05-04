@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class Request implements Serializable {
     private RequestType type;
-    private Integer id = null;
+    private String chatroomName=null;
 
     /**
      * Create Request object of given type.
@@ -17,10 +17,11 @@ public class Request implements Serializable {
      * @param type Type of request you want to create.
      * @param id Id of chatroom you want to target with request.
      */
-    public Request(RequestType type, Integer id){
+    public Request(RequestType type, String chatroomName){
         this.type=type;
-        this.id = id;
+        this.chatroomName=chatroomName;
     }
+
 
     /**
      * Returns type of Request.
@@ -31,12 +32,9 @@ public class Request implements Serializable {
         return type;
     }
 
-    /**
-     * Returns ID of chatroom targeted by request.
-     * @return the id of chatroom targeted by request.
-     */
-    public Integer getId() {
-        return id;
+
+    public String getChatroomName(){
+        return chatroomName;
     }
 
     /**
@@ -48,11 +46,4 @@ public class Request implements Serializable {
         this.type = type;
     }
 
-    /**
-     * Sets destined chatroom
-     * @param id id of your targeted chatroom.
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 }

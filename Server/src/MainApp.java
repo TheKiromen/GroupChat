@@ -10,7 +10,8 @@ import java.util.concurrent.Executors;
 public class MainApp implements Runnable{
 
     //Variables
-    private ConcurrentHashMap<Integer, ArrayList<ClientHandler>> chatrooms = new ConcurrentHashMap<Integer, ArrayList<ClientHandler>>();
+    //private ConcurrentHashMap<Integer, ArrayList<ClientHandler>> chatrooms = new ConcurrentHashMap<Integer, ArrayList<ClientHandler>>();
+    private ArrayList<Chatroom> chatrooms = new ArrayList<>();
     private ExecutorService pool = Executors.newCachedThreadPool();
     private ServerSocket server;
     private ClientHandler clientThread;
@@ -33,10 +34,13 @@ public class MainApp implements Runnable{
             //Server setup
             server = new ServerSocket(6789);
 
-            //Create global chatroom
-            chatrooms.put(1,new ArrayList<ClientHandler>());
-            //TMP
-            chatrooms.put(2,new ArrayList<ClientHandler>());
+//            //Create global chatroom
+//            chatrooms.put(1,new ArrayList<ClientHandler>());
+//            //TMP
+//            chatrooms.put(2,new ArrayList<ClientHandler>());
+
+            chatrooms.add(new Chatroom("Global",new ArrayList<ClientHandler>()));
+            chatrooms.add(new Chatroom("Test",new ArrayList<ClientHandler>()));
 
             frame.writeToConsole("Waiting for connection...");
 
@@ -49,8 +53,8 @@ public class MainApp implements Runnable{
                 //frame.writeToConsole("New client connected!");
 
                 //Create and run new thread for each client
-                clientThread = new ClientHandler(connection,chatrooms,1,frame);
-                chatrooms.get(1).add(clientThread);
+                clientThread = new ClientHandler(connection,chatrooms, chatrooms.get(0),frame);
+                chatrooms.get(0).getUsers().add(clientThread);
                 pool.execute(clientThread);
             }
         }

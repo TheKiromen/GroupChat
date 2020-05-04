@@ -1,15 +1,15 @@
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientHandler implements Runnable {
 
     //Variables
-    Object input;
-    String username;
-    private int chatroom;
-    private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
+    private Object input;
+    private String username;
+    private Chatroom currentChatroom;
+    //private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
+    private ArrayList<Chatroom> chatrooms;
     private Socket client;
     private ObjectInputStream inFromClient;
     private ObjectOutputStream outToClient;
@@ -23,10 +23,10 @@ public class ClientHandler implements Runnable {
      * @throws IOException When cant establish stream connection with client.
      */
     //Constructor, setting up communication streams
-    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom,ServerFrame f) throws IOException{
+    public ClientHandler(Socket clientSocket, ArrayList<Chatroom> users,Chatroom chatroom, ServerFrame f) throws IOException{
         this.client = clientSocket;
-        this.users = users;
-        this.chatroom=chatroom;
+        this.chatrooms = users;
+        this.currentChatroom =chatroom;
         this.frame=f;
 
         inFromClient = new ObjectInputStream(client.getInputStream());
@@ -54,21 +54,32 @@ public class ClientHandler implements Runnable {
                 try {
                     //If incoming Object is a message, broadcast it.
                     msg=(Message)input;
-                    frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom "+chatroom);
+                    frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom: "+ currentChatroom.getChatroomName());
                     sendMessageToAll(msg);
                 }catch(ClassCastException ex){
                     //If incoming Object is a request, handle it according to its type.
                     Request r = (Request)input;
                     frame.writeToConsole(username+" sent new request: "+r.getType());
-                    changeChatroom(r.getId());
-                    sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
+
+                    //Chatroom change request
+                    if(r.getType()==RequestType.CHATROOM_CHANGE){
+                        for(Chatroom c : chatrooms){
+                            if(c.getChatroomName().equals(r.getChatroomName())){
+                                if(c!=currentChatroom){
+                                    changeChatroom(c);
+                                }
+                            }
+                        }
+                    }
+//                    changeChatroom(r.getId());
+//                    sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
                 }
             }
         }
         //Handle user disconnection
         catch(IOException e){
             frame.writeToConsole(username+" disconnected.");
-            users.get(chatroom).remove(this);
+            currentChatroom.getUsers().remove(this);
             try {
                 sendMessageToAll(new Message("[Server]",username+" disconnected."));
             } catch (IOException ex) {
@@ -108,22 +119,22 @@ public class ClientHandler implements Runnable {
      */
     //Method for safe message broadcasting from inside and outside the Thread
     public void sendMessageToAll(Message msg) throws IOException{
-        for(ClientHandler u : users.get(chatroom)){
+        for(ClientHandler u : currentChatroom.getUsers()){
             u.sendMessage(msg);
         }
     }
 
     /**
      * Change chatroom user is connected to.
-     * @param id Id of your target chatroom.
+     * @param chatroom Chatroom you want to connect to
      * @throws IOException When stream error occurs.
      */
     //Method for changing chatroom
-    private void changeChatroom(int id) throws IOException {
-        users.get(chatroom).remove(this);
+    private void changeChatroom(Chatroom chatroom) throws IOException {
+        this.currentChatroom.getUsers().remove(this);
         sendMessageToAll(new Message("[Server]",username+" has left the room."));
-        this.chatroom=id;
-        users.get(chatroom).add(this);
+        this.currentChatroom =chatroom;
+        chatroom.getUsers().add(this);
     }
 
 }
