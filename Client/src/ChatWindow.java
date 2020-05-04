@@ -147,14 +147,6 @@ public class ChatWindow extends JFrame {
     private class MessageSender implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            if(inputField.getText().equals("test")){
-                try {
-                    outToServer.writeObject(new Request(RequestType.CHATROOM_CHANGE,"Test"));
-                    outToServer.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }else{
             //Create new message
             msg=new Message(username,inputField.getText());
             try{
@@ -164,7 +156,7 @@ public class ChatWindow extends JFrame {
                 inputField.setText("");
             }catch (IOException e) {
                 e.printStackTrace();
-            }}
+            }
         }
     }
 

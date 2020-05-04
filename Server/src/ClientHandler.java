@@ -8,7 +8,6 @@ public class ClientHandler implements Runnable {
     private Object input;
     private String username;
     private Chatroom currentChatroom;
-    //private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
     private ArrayList<Chatroom> chatrooms;
     private Socket client;
     private ObjectInputStream inFromClient;
@@ -57,6 +56,7 @@ public class ClientHandler implements Runnable {
                     frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom: "+ currentChatroom.getChatroomName());
                     sendMessageToAll(msg);
                 }catch(ClassCastException ex){
+
                     //If incoming Object is a request, handle it according to its type.
                     Request r = (Request)input;
                     frame.writeToConsole(username+" sent new request: "+r.getType());
@@ -71,8 +71,9 @@ public class ClientHandler implements Runnable {
                             }
                         }
                     }
-//                    changeChatroom(r.getId());
-//                    sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
+
+                    //Other types of requests here
+
                 }
             }
         }
