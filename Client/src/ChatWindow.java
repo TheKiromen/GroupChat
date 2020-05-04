@@ -96,7 +96,7 @@ public class ChatWindow extends JFrame {
         user.setText("Connected as: "+username);
         user.setFont(statusFont);
 
-        chatroom.setText("Chatroom ID: "+chatroomID);
+        //chatroom.setText("Chatroom ID: "+chatroomID);
         chatroom.setFont(statusFont);
     }
 

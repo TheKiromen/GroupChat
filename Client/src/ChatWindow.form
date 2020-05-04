@@ -71,7 +71,7 @@
         </constraints>
         <properties>
           <foreground color="-2500135"/>
-          <text value="Chatroom ID: 1"/>
+          <text value="Chatroom: Global"/>
         </properties>
       </component>
     </children>

@@ -17,6 +17,7 @@ public class UsernameFrame extends JFrame {
     private MyButton connectButton;
     private JLabel enterLabel;
     private JPanel inputPanel;
+    private JLabel authors;
     private Border spacing = BorderFactory.createEmptyBorder(8, 8, 8, 8);
 
     //Fonts
@@ -40,8 +41,9 @@ public class UsernameFrame extends JFrame {
         setUpComponents();
         add(inputPanel);
         setTitle("Welcome!");
-        setSize(400, 130);
-        setMinimumSize(new Dimension(400,130));
+        setResizable(false);
+        setSize(450, 150);
+        setMinimumSize(new Dimension(450,150));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -60,11 +62,15 @@ public class UsernameFrame extends JFrame {
      */
     private void setUpComponents() {
 
+        //Labels
         textField.setFont(componentsFont);
         textField.setBorder(spacing);
         enterLabel.setFont(componentsFont);
         enterLabel.setForeground(fg);
         enterLabel.setBorder(spacing);
+        authors.setFont(new Font("Arial",Font.PLAIN,12));
+
+        //Buttons
         connectButton.setFocusable(false);
         connectButton.setFont(componentsFont);
         connectButton.setForeground(fg);
