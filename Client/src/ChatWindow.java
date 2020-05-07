@@ -161,6 +161,8 @@ public class ChatWindow extends JFrame {
     //Write text to chatArea
     public void writeToConsole(String text){chatArea.append(text+"\n"); }
 
+
+    //Change current chatroom label
     public void changeChatroomLabel(String text){
         chatroom.setText("Chatroom: "+text);
         chatroom.repaint();

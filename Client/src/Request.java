@@ -23,6 +23,12 @@ public class Request implements Serializable {
         this.chatroomName=chatroomName;
     }
 
+    /**
+     * Create response Request regarding given requestType
+     * @param type type of request you want respond to
+     * @param chatroomName chatroom regarding this response
+     * @param response type of response, failed/succeeded operation
+     */
     public Request(RequestType type, String chatroomName, boolean response){
         this.type=type;
         this.chatroomName=chatroomName;
@@ -47,6 +53,10 @@ public class Request implements Serializable {
         return chatroomName;
     }
 
+    /**
+     * Returns response type
+     * @return type of your response
+     */
     public boolean getResponse(){return response;}
 
 

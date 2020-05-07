@@ -70,19 +70,23 @@ public class ClientHandler implements Runnable {
                                 }
                             }
                         }
+                    //Create new chatroom request
                     }else if(r.getType()==RequestType.CREATE_CHATROOM){
+                        //Check if chatroom already exists
                         for(int i=0;i<chatrooms.size();i++){
+                            //If exists send "invalid chatroom" response
                             if(chatrooms.get(i).getChatroomName().equals(r.getChatroomName())){
-                                //Chatroom already exists, send response to user.
                                 outToClient.writeObject(new Request(RequestType.CREATE_CHATROOM,r.getChatroomName(),false));
                                 outToClient.flush();
                                 break;
-                            }else if(i==chatrooms.size()-1){
-                                //Create new chatroom and connect user to it
+
+                            }//If does not exits create chatroom, and connect user to it.
+                            else if(i==chatrooms.size()-1){
                                 chatrooms.add(new Chatroom(r.getChatroomName(),new ArrayList<ClientHandler>()));
                                 //created chatroom is added to end of arrayList
                                 changeChatroom(chatrooms.get(chatrooms.size()-1));
 
+                                //Send successful creation response
                                 outToClient.writeObject(new Request(RequestType.CREATE_CHATROOM,r.getChatroomName(),true));
                                 outToClient.flush();
                                 break;
