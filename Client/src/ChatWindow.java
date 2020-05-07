@@ -89,7 +89,18 @@ public class ChatWindow extends JFrame {
 
 
         newRoom.setFont(statusFont);
-
+        //Temporary, this functionality will be in new frame
+        newRoom.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                try {
+                    outToServer.writeObject(new Request(RequestType.CREATE_CHATROOM,"New"));
+                    outToServer.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
         changeRoom.setFont(statusFont);
@@ -149,6 +160,11 @@ public class ChatWindow extends JFrame {
 
     //Write text to chatArea
     public void writeToConsole(String text){chatArea.append(text+"\n"); }
+
+    public void changeChatroomLabel(String text){
+        chatroom.setText("Chatroom: "+text);
+        chatroom.repaint();
+    }
 
 
     //Internal class that defines button behavior

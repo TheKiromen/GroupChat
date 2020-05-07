@@ -3,6 +3,7 @@ import java.io.Serializable;
 public class Request implements Serializable {
     private RequestType type;
     private String chatroomName=null;
+    private boolean response = false;
 
     /**
      * Create Request object of given type.
@@ -22,6 +23,12 @@ public class Request implements Serializable {
         this.chatroomName=chatroomName;
     }
 
+    public Request(RequestType type, String chatroomName, boolean response){
+        this.type=type;
+        this.chatroomName=chatroomName;
+        this.response=response;
+    }
+
 
     /**
      * Returns type of Request.
@@ -39,6 +46,9 @@ public class Request implements Serializable {
     public String getChatroomName(){
         return chatroomName;
     }
+
+    public boolean getResponse(){return response;}
+
 
     /**
      * Sets type of request.

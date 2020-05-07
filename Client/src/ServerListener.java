@@ -10,6 +10,7 @@ public class ServerListener implements Runnable {
     private Socket server;
     private ObjectInputStream inFromServer;
     private ChatWindow frame;
+    private Object input;
 
     /**
      * Creates new thread with associated socket. Responsible for receiving messages from server.
@@ -32,9 +33,22 @@ public class ServerListener implements Runnable {
         try {
             //Main loop for listening for messages
             while(true){
-                //Read and print out message
-                Message msg = (Message)inFromServer.readObject();
-                frame.writeToConsole(msg.getSender()+": "+msg.getContent());
+                try {
+                    //Read and print out message
+                    input=inFromServer.readObject();
+                    Message msg = (Message) input;
+                    frame.writeToConsole(msg.getSender() + ": " + msg.getContent());
+                }catch(ClassCastException e){
+                    Request r = (Request) input;
+                    if(r.getType()==RequestType.CREATE_CHATROOM){
+                        if(r.getResponse()==true){
+                            frame.changeChatroomLabel(r.getChatroomName());
+                            frame.writeToConsole("Changed chatroom to "+r.getChatroomName());
+                        }else{
+                            JOptionPane.showMessageDialog(frame,"Chatroom already exists.");
+                        }
+                    }
+                }
             }
 
         }//Exception when server closes
