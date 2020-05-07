@@ -24,6 +24,8 @@ public class ChatWindow extends JFrame {
     private JTextArea chatArea;
     private JLabel user;
     private JLabel chatroom;
+    private JButton changeRoom;
+    private JButton newRoom;
     private ChatWindow frame;
 
     //Fonts
@@ -39,8 +41,6 @@ public class ChatWindow extends JFrame {
     private ServerListener listeningThread;
     private MessageSender sender = new MessageSender();
     private Message msg;
-    private int chatroomID=1;
-
 
 
 
@@ -85,6 +85,14 @@ public class ChatWindow extends JFrame {
         sendButton.setFont(componentsFont);
         sendButton.setFocusable(false);
         sendButton.addActionListener(sender);
+
+
+
+        newRoom.setFont(statusFont);
+
+
+
+        changeRoom.setFont(statusFont);
 
 
         //InputField setup

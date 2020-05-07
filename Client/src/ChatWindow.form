@@ -46,9 +46,9 @@
       <component id="f31d9" class="MyButton" binding="sendButton" custom-create="true">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="100" height="30"/>
-            <preferred-size width="100" height="30"/>
-            <maximum-size width="100" height="30"/>
+            <minimum-size width="120" height="30"/>
+            <preferred-size width="120" height="30"/>
+            <maximum-size width="120" height="30"/>
           </grid>
         </constraints>
         <properties>
@@ -72,6 +72,30 @@
         <properties>
           <foreground color="-2500135"/>
           <text value="Chatroom: Global"/>
+        </properties>
+      </component>
+      <component id="9cea2" class="javax.swing.JButton" binding="changeRoom">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="30"/>
+            <preferred-size width="120" height="30"/>
+            <maximum-size width="120" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Change room"/>
+        </properties>
+      </component>
+      <component id="6cd4b" class="javax.swing.JButton" binding="newRoom">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="30"/>
+            <preferred-size width="120" height="30"/>
+            <maximum-size width="120" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="New room"/>
         </properties>
       </component>
     </children>
