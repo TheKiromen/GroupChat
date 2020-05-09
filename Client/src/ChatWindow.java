@@ -102,8 +102,19 @@ public class ChatWindow extends JFrame {
             }
         });
 
-
+        //Temporary button functionality
         changeRoom.setFont(statusFont);
+        changeRoom.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                try {
+                    outToServer.writeObject(new Request(RequestType.CHATROOM_CHANGE,"New"));
+                    outToServer.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
         //InputField setup

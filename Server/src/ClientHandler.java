@@ -63,11 +63,23 @@ public class ClientHandler implements Runnable {
 
                     //Chatroom change request
                     if(r.getType()==RequestType.CHATROOM_CHANGE){
-                        for(Chatroom c : chatrooms){
-                            if(c.getChatroomName().equals(r.getChatroomName())){
-                                if(c!=currentChatroom){
-                                    changeChatroom(c);
-                                }
+                        //Check if chatroom already exists
+                        for(int i=0;i<chatrooms.size();i++){
+                            //If exists send change to it, send successful response
+                            if(chatrooms.get(i).getChatroomName().equals(r.getChatroomName())){
+                                changeChatroom(chatrooms.get(i));
+
+                                //Send successful change response
+                                outToClient.writeObject(new Request(RequestType.CHATROOM_CHANGE,r.getChatroomName(),true));
+                                outToClient.flush();
+
+                                break;
+                            }//If does not exits send invalid chatroom response
+                            else if(i==chatrooms.size()-1){
+                                //Send invalid change response
+                                outToClient.writeObject(new Request(RequestType.CHATROOM_CHANGE,r.getChatroomName(),false));
+                                outToClient.flush();
+                                break;
                             }
                         }
                     //Create new chatroom request
@@ -156,6 +168,7 @@ public class ClientHandler implements Runnable {
         this.currentChatroom.getUsers().remove(this);
         sendMessageToAll(new Message("[Server]",username+" has left the room."));
         this.currentChatroom =chatroom;
+        sendMessageToAll(new Message("[Server]",username+" has joined the room."));
         chatroom.getUsers().add(this);
     }
 
