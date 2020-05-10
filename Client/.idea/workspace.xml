@@ -2,16 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b110b47b-f586-404e-a19e-769efd7eb36f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CreateChatroom.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CreateChatroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/ChatWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ChatWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/ChatWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ChatWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/ChatWindow$MessageSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ChatWindow$MessageSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/ChatWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ChatWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/MyButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/RequestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/ServerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/UsernameFrame$Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/UsernameFrame$Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/UsernameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UsernameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsernameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Chatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Chatroom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/MyButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/RequestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ShutDown.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/ShutDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ShutDown.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CreateChatroom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UsernameFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UsernameFrame.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CreateChatroom.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,11 +88,72 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>chatwindow</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/CreateChatroom.form" />
+        <option value="$PROJECT_DIR$/src/CreateChatroom.java" />
+        <option value="$PROJECT_DIR$/src/UsernameFrame.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="800" />
+    <option name="height" value="860" />
+  </component>
   <component name="ProjectId" id="1YuGeuQxKAkWaUTlMXEf8Tl6GL6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatWindow" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CreateChatroom" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UsernameFrame" type="e9f4de52:FormNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,8 +164,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="228" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588207687731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589110270667" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.UsernameFrame">
     <configuration name="MainApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
@@ -50,7 +190,7 @@
       </method>
     </configuration>
     <configuration name="UsernameFrame" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="UsernameFrame" />
       <module name="Client" />
@@ -81,6 +221,66 @@
       <updated>1583785164846</updated>
     </task>
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="800" height="860" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25945947" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12339332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="WindowStateProjectService">
     <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588243486534">
@@ -166,6 +366,76 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586034364035" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MyButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RequestType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChatWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateChatroom.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateChatroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsernameFrame.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsernameFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

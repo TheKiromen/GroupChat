@@ -3,10 +3,6 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -96,6 +92,7 @@ public class UsernameFrame extends JFrame {
 
             String tmp=textField.getText();
             matcher=regex.matcher(tmp);
+
 
             //Check if username is valid
             if(tmp.length()>=4 && tmp.length()<=20){

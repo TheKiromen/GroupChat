@@ -11,7 +11,6 @@ public class ShutDown extends JFrame {
     private MyButton yesButton;
     private MyButton noButton;
     private JPanel ShutDown;
-    private int result=2;
 
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
