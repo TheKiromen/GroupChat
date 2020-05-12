@@ -52,7 +52,7 @@ public class ServerListener implements Runnable {
                             JOptionPane.showMessageDialog(frame,"Chatroom already exists.");
                         }
                     //Change chatroom request
-                    }else if(r.getType()==RequestType.CREATE_CHATROOM){
+                    }else if(r.getType()==RequestType.CHATROOM_CHANGE){
                         //If successful - change label
                         if(r.getResponse()==true){
                             frame.writeToConsole("Changed chatroom to "+r.getChatroomName());
