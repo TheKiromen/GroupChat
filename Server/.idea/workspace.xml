@@ -7,16 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/dictionaries/Lenovo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/dictionaries/Lenovo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/ChangeChatroom.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChangeChatroom.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/ChangeChatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChangeChatroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ChatWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ServerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ServerListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

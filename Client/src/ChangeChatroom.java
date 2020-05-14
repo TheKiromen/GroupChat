@@ -51,6 +51,7 @@ public class ChangeChatroom extends JFrame {
         chatroomList.setBorder(spacing);
         chatroomList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         chatroomList.setLayoutOrientation(JList.VERTICAL);
+        chatroomList.setVisibleRowCount(5);
         chatroomList.setListData(chatrooms);
 
         //Labels
