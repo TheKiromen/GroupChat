@@ -59,7 +59,7 @@ public class ChatWindow extends JFrame {
         setMinimumSize(new Dimension(600, 450));
 
         //FrameSetup
-        setTitle("Client Application");
+        setTitle("Chat application by: M. Haracz, D. Kruczek");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(true);
         setLocationRelativeTo(null);

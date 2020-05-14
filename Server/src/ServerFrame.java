@@ -49,7 +49,7 @@ public class ServerFrame extends JFrame {
         setMinimumSize(new Dimension(820, 614));
 
         //Frame setup
-        setTitle("Server Application");
+        setTitle("Chat application by: M. Haracz, D. Kruczek");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(true);
         setLocationRelativeTo(null);
