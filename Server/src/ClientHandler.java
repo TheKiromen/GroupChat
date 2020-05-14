@@ -104,9 +104,15 @@ public class ClientHandler implements Runnable {
                                 break;
                             }
                         }
+                    }//Sent list of current chatrooms
+                    else if(r.getType()==RequestType.GET_CHATROOM_LIST){
+                        String[] tmp = new String[chatrooms.size()];
+                        for(int i=0; i<chatrooms.size();i++){
+                            tmp[i]=chatrooms.get(i).getChatroomName();
+                        }
+                        outToClient.writeObject(tmp);
+                        outToClient.flush();
                     }
-
-
                 }
             }
         }

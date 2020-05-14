@@ -102,8 +102,12 @@ public class ChatWindow extends JFrame {
         changeRoom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String[] a = {"a","b","cd","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test"};
-                new ChangeChatroom(a,outToServer);
+                try {
+                    outToServer.writeObject(new Request(RequestType.GET_CHATROOM_LIST));
+                    outToServer.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -177,6 +181,11 @@ public class ChatWindow extends JFrame {
     public void changeChatroomLabel(String text){
         chatroom.setText("Chatroom: "+text);
         chatroom.repaint();
+    }
+
+
+    public void showChangeChatroomDialog(String[] chatrooms){
+        new ChangeChatroom(chatrooms,outToServer);
     }
 
 

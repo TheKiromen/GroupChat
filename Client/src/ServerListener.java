@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 
 public class ServerListener implements Runnable {
 
@@ -40,27 +41,32 @@ public class ServerListener implements Runnable {
                     frame.writeToConsole(msg.getSender() + ": " + msg.getContent());
                 //If input is a response to your request.
                 }catch(ClassCastException e){
-                    Request r = (Request) input;
-                    //Create chatroom request
-                    if(r.getType()==RequestType.CREATE_CHATROOM){
-                        //If successful - change label
-                        if(r.getResponse()==true){
-                            frame.changeChatroomLabel(r.getChatroomName());
-                            frame.writeToConsole("Changed chatroom to "+r.getChatroomName());
-                        }//If failed - show dialog
-                        else{
-                            JOptionPane.showMessageDialog(frame,"Chatroom already exists.");
+                    try {
+                        Request r = (Request) input;
+                        //Create chatroom request
+                        if (r.getType() == RequestType.CREATE_CHATROOM) {
+                            //If successful - change label
+                            if (r.getResponse() == true) {
+                                frame.changeChatroomLabel(r.getChatroomName());
+                                frame.writeToConsole("Changed chatroom to " + r.getChatroomName());
+                            }//If failed - show dialog
+                            else {
+                                JOptionPane.showMessageDialog(frame, "Chatroom already exists.");
+                            }
+                            //Change chatroom request
+                        } else if (r.getType() == RequestType.CHATROOM_CHANGE) {
+                            //If successful - change label
+                            if (r.getResponse() == true) {
+                                frame.writeToConsole("Changed chatroom to " + r.getChatroomName());
+                                frame.changeChatroomLabel(r.getChatroomName());
+                            }//If failed - show dialog
+                            else {
+                                JOptionPane.showMessageDialog(frame, "Cannot connect to chatroom.");
+                            }
                         }
-                    //Change chatroom request
-                    }else if(r.getType()==RequestType.CHATROOM_CHANGE){
-                        //If successful - change label
-                        if(r.getResponse()==true){
-                            frame.writeToConsole("Changed chatroom to "+r.getChatroomName());
-                            frame.changeChatroomLabel(r.getChatroomName());
-                        }//If failed - show dialog
-                        else{
-                            JOptionPane.showMessageDialog(frame,"Cannot connect to chatroom.");
-                        }
+                    }catch(ClassCastException ex){
+                        String[] tmp = (String[])input;
+                        frame.showChangeChatroomDialog(tmp);
                     }
                 }
             }
