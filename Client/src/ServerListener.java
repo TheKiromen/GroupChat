@@ -61,7 +61,7 @@ public class ServerListener implements Runnable {
                                 frame.changeChatroomLabel(r.getChatroomName());
                             }//If failed - show dialog
                             else {
-                                JOptionPane.showMessageDialog(frame, "Cannot connect to chatroom.");
+                                JOptionPane.showMessageDialog(frame, "You are already connected to this chatroom.");
                             }
                         }
                     }catch(ClassCastException ex){

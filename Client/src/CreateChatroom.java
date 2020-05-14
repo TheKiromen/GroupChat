@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CreateChatroom extends JFrame {
     //Component Variables
@@ -21,6 +23,8 @@ public class CreateChatroom extends JFrame {
     //Variables
     private ObjectOutputStream outToServer;
     private Action a = new Action();
+    private Pattern regex = Pattern.compile("^[a-zA-Z0-9]*$");
+    private Matcher matcher;
 
     //Constructor
     public CreateChatroom(ObjectOutputStream o) {
@@ -72,13 +76,27 @@ public class CreateChatroom extends JFrame {
     private class Action implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            try {
-                outToServer.writeObject(new Request(RequestType.CREATE_CHATROOM,textField1.getText()));
-                outToServer.flush();
-                CreateChatroom.this.dispose();
-            } catch (IOException e) {
-                e.printStackTrace();
+            String tmp=textField1.getText();
+            matcher=regex.matcher(tmp);
+
+
+            //Check if username is valid
+            if(tmp.length()>=4 && tmp.length()<=20){
+                if(matcher.matches()){
+                    try {
+                        outToServer.writeObject(new Request(RequestType.CREATE_CHATROOM,tmp));
+                        outToServer.flush();
+                        CreateChatroom.this.dispose();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null,"Username can contain only letters and numbers.");
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Username should be 4 to 20 characters long.");
             }
+
         }
     }
 }
