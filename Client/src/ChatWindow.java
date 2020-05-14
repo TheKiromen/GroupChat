@@ -93,12 +93,7 @@ public class ChatWindow extends JFrame {
         newRoom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                try {
-                    outToServer.writeObject(new Request(RequestType.CREATE_CHATROOM,"New"));
-                    outToServer.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                new CreateChatroom(outToServer);
             }
         });
 
