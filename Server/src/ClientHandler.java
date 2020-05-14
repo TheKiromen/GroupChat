@@ -66,7 +66,7 @@ public class ClientHandler implements Runnable {
                         //Check if chatroom already exists
                         for(int i=0;i<chatrooms.size();i++){
                             //If exists send change to it, send successful response
-                            if(chatrooms.get(i).getChatroomName().equals(r.getChatroomName())){
+                            if((chatrooms.get(i).getChatroomName().equals(r.getChatroomName()))&&currentChatroom!=chatrooms.get(i)){
                                 changeChatroom(chatrooms.get(i));
 
                                 //Send successful change response

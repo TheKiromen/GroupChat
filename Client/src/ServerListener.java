@@ -59,7 +59,7 @@ public class ServerListener implements Runnable {
                             frame.changeChatroomLabel(r.getChatroomName());
                         }//If failed - show dialog
                         else{
-                            JOptionPane.showMessageDialog(frame,"Chatroom doesn't exist.");
+                            JOptionPane.showMessageDialog(frame,"Cannot connect to chatroom.");
                         }
                     }
                 }

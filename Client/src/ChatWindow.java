@@ -24,8 +24,8 @@ public class ChatWindow extends JFrame {
     private JTextArea chatArea;
     private JLabel user;
     private JLabel chatroom;
-    private JButton changeRoom;
-    private JButton newRoom;
+    private MyButton changeRoom;
+    private MyButton newRoom;
     private ChatWindow frame;
 
     //Fonts
@@ -88,8 +88,8 @@ public class ChatWindow extends JFrame {
 
 
 
+        //Create new chatroom button
         newRoom.setFont(statusFont);
-        //Temporary, this functionality will be in new frame
         newRoom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -97,17 +97,13 @@ public class ChatWindow extends JFrame {
             }
         });
 
-        //Temporary button functionality
+        //Change current chatroom button
         changeRoom.setFont(statusFont);
         changeRoom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                try {
-                    outToServer.writeObject(new Request(RequestType.CHATROOM_CHANGE,"New"));
-                    outToServer.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                String[] a = {"a","b","cd","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test","test"};
+                new ChangeChatroom(a,outToServer);
             }
         });
 
@@ -131,6 +127,15 @@ public class ChatWindow extends JFrame {
     private void createUIComponents(){
         sendButton=new MyButton();
         sendButton.setContentAreaFilled(false);
+        sendButton.setFocusable(false);
+
+        changeRoom=new MyButton();
+        changeRoom.setContentAreaFilled(false);
+        changeRoom.setFocusable(false);
+
+        newRoom=new MyButton();
+        newRoom.setContentAreaFilled(false);
+        newRoom.setFocusable(false);
     }
 
     /**
