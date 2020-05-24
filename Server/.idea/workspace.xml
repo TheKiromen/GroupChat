@@ -7,59 +7,163 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChangeChatroom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChatWindow.MessageSender.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChatWindow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/CreateChatroom.Action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/CreateChatroom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/Message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/MyButton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/RequestType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ServerListener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/UsernameFrame.Action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/UsernameFrame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-3.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/member-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Documentation/type-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/Chatroom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/ClientHandler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/MainApp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/Message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/MyButton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/RequestType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/ServerFrame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/ShutDown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-3.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/member-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/package-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/type-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$MessageSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$MessageSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom$Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom$Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/MyButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/RequestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ServerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ChangeChatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChangeChatroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ChatWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/CreateChatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/CreateChatroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/MyButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/RequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/RequestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/ServerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/ServerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/UsernameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/UsernameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Chatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Chatroom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/MyButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MyButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/RequestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/ShutDown.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ShutDown.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chatroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RequestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShutDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShutDown.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,19 +171,6 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="209" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ServerFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,64 +183,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/Message.java" />
-        <option value="$PROJECT_DIR$/src/Chatroom.java" />
-        <option value="$PROJECT_DIR$/src/RequestType.java" />
-        <option value="$PROJECT_DIR$/src/ShutDown.java" />
-        <option value="$PROJECT_DIR$/src/MyButton.java" />
-        <option value="$PROJECT_DIR$/src/Request.java" />
-        <option value="$PROJECT_DIR$/src/ServerFrame.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="800" />
     <option name="width" value="800" />
     <option name="height" value="860" />
   </component>
   <component name="ProjectId" id="1YuGclrffM0oyEXGhkG0FEiADLc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerFrame" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ShutDown" type="e9f4de52:FormNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -157,13 +198,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="250" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590357003319" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -178,18 +220,6 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.ServerFrame">
     <configuration name="MainApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11.0.5" />
@@ -201,7 +231,7 @@
       </method>
     </configuration>
     <configuration name="ServerFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ServerFrame" />
       <module name="Server" />
@@ -242,70 +272,14 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="800" y="0" width="800" height="860" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20675676" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12362637" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1336761" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12362637" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589466917627">
+    <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590358741347">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589466917627" />
+    <state x="-1641" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358741347" />
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588243152573" />
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583824560335" />
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1586792687412">
@@ -319,10 +293,10 @@
     </state>
     <state x="-1296" y="249" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589482965456" />
     <state x="499" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586609346766" />
-    <state x="-1112" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589466910203">
+    <state x="-1112" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590358735815">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1112" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589466910203" />
+    <state x="-1112" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358735815" />
     <state x="646" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588243133719" />
     <state x="57" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588614405932">
       <screen x="0" y="0" width="1536" height="824" />
@@ -336,34 +310,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="644" y="301" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1587725896064" />
-    <state x="630" y="158" key="FileChooserDialogImpl" timestamp="1589020925981">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1213" y="252" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590358796243">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1132" y="199" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586045960521" />
+    <state x="-1213" y="252" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358796243" />
+    <state x="-1132" y="199" key="FileChooserDialogImpl" timestamp="1590358781451">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1132" y="199" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358781451" />
     <state x="630" y="158" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589020925981" />
     <state x="630" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583868449735" />
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1589483039387">
+    <state width="938" height="174" key="GridCell.Tab.0.bottom" timestamp="1590358796273">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589483039387" />
+    <state width="938" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358796273" />
     <state width="1493" height="127" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589472267744" />
     <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
-    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1589483039387">
+    <state width="938" height="174" key="GridCell.Tab.0.center" timestamp="1590358796273">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589483039387" />
+    <state width="938" height="174" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358796273" />
     <state width="1493" height="127" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589472267744" />
     <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
-    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1589483039387">
+    <state width="938" height="174" key="GridCell.Tab.0.left" timestamp="1590358796273">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589483039387" />
+    <state width="938" height="174" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358796273" />
     <state width="1493" height="127" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589472267743" />
     <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
-    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1589483039387">
+    <state width="938" height="174" key="GridCell.Tab.0.right" timestamp="1590358796273">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589483039387" />
+    <state width="938" height="174" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358796273" />
     <state width="1493" height="127" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589472267744" />
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583866243078" />
     <state width="1493" height="380" key="GridCell.Tab.1.bottom" timestamp="1588851879984">
@@ -382,10 +360,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="380" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588851879984" />
-    <state x="-1609" y="0" key="SettingsEditor" timestamp="1589482968139">
+    <state x="-1609" y="0" key="SettingsEditor" timestamp="1590358747358">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1609" y="0" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589482968139" />
+    <state x="-1609" y="0" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590358747358" />
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1586465131643" />
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1589020915759">
       <screen x="0" y="0" width="1536" height="824" />
@@ -411,70 +389,5 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Server$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1586340236843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Chatroom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RequestType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShutDown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
