@@ -6,6 +6,10 @@ import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Class allows to enter unique username.
+ * Defines and verifies requirements of username.
+ */
 public class UsernameFrame extends JFrame {
 
     //Component Variables
@@ -45,11 +49,9 @@ public class UsernameFrame extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-
         connectButton.addActionListener(a);
 
         textField.addActionListener(a);
-
 
     }
 
@@ -57,7 +59,6 @@ public class UsernameFrame extends JFrame {
      * Configures components before adding them to frame.
      */
     private void setUpComponents() {
-
         //Labels
         textField.setFont(componentsFont);
         textField.setBorder(spacing);
@@ -72,11 +73,10 @@ public class UsernameFrame extends JFrame {
         connectButton.setForeground(fg);
         connectButton.setBackground(Color.getHSBColor(60, 0.12f, 0.22f));
         connectButton.setBorder(BorderFactory.createRaisedBevelBorder());
-
     }
 
     /**
-     * Initializes custom components
+     * Initializes custom components.
      */
     //Create and setup custom components
     private void createUIComponents(){
@@ -85,14 +85,15 @@ public class UsernameFrame extends JFrame {
         connectButton.setFocusable(false);
     }
 
-    //Internal class that defines button behavior
+    /**
+     *  Internal class that defines custom button behavior.
+     */
     private class Action implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
 
             String tmp=textField.getText();
             matcher=regex.matcher(tmp);
-
 
             //Check if username is valid
             if(tmp.length()>=4 && tmp.length()<=20){

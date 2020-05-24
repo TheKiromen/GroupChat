@@ -10,9 +10,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Client side of simple chatroom chat application.
+ * Client side of simple chat application.
  *
  * @autor Monika Haracz, Dominik Kruczek
+ *
+ * Class defines chat window GUI.
+ * Displays sent and incoming messages on screen.
+ * Responsible for setting up a connection with server.
  */
 
 public class ChatWindow extends JFrame {
@@ -85,8 +89,6 @@ public class ChatWindow extends JFrame {
         sendButton.setFont(componentsFont);
         sendButton.setFocusable(false);
         sendButton.addActionListener(sender);
-
-
 
         //Create new chatroom button
         newRoom.setFont(statusFont);
@@ -173,23 +175,31 @@ public class ChatWindow extends JFrame {
         }
     }
 
-    //Write text to chatArea
+    /**
+     * Writes text to chatArea.
+     * @param text message that is written to chatArea.
+     */
     public void writeToConsole(String text){chatArea.append(text+"\n"); }
 
-
-    //Change current chatroom label
+    /**
+     * Changes current chatroom label.
+     */
     public void changeChatroomLabel(String text){
         chatroom.setText("Chatroom: "+text);
         chatroom.repaint();
     }
 
-
+    /**
+     * Shows a dialog about chatroom change.
+     * @param chatrooms list of chatrooms.
+     */
     public void showChangeChatroomDialog(String[] chatrooms){
         new ChangeChatroom(chatrooms,outToServer);
     }
 
-
-    //Internal class that defines button behavior
+    /**
+     * Internal class that defines button behavior.
+     */
     private class MessageSender implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {

@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
+/**
+ * Main class that implements server sockets.
+ * A server socket waits for connections to come in over the network.
+ */
 public class MainApp implements Runnable{
 
     //Variables
@@ -15,12 +18,14 @@ public class MainApp implements Runnable{
     private ClientHandler clientThread;
     private ServerFrame frame;
 
+    /**
+     * Handles server's main GUI.
+     * @param s main server frame.
+     */
     //Constructor
     MainApp(ServerFrame s){
         this.frame=s;
     }
-
-
 
     /**
      * Creates server socket, accepts incoming client connections until you shut down server.

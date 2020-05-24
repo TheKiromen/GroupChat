@@ -1,5 +1,8 @@
 import java.io.Serializable;
 
+/**
+ * Class responsible for handling clients' requests such as changing or creating new chatroom.
+ */
 public class Request implements Serializable {
     private RequestType type;
     private String chatroomName=null;
@@ -24,17 +27,16 @@ public class Request implements Serializable {
     }
 
     /**
-     * Create response Request regarding given requestType
-     * @param type type of request you want respond to
-     * @param chatroomName chatroom regarding this response
-     * @param response type of response, failed/succeeded operation
+     * Create response Request regarding given requestType.
+     * @param type type of request you want respond to.
+     * @param chatroomName chatroom regarding this response.
+     * @param response type of response, failed/succeeded operation.
      */
     public Request(RequestType type, String chatroomName, boolean response){
         this.type=type;
         this.chatroomName=chatroomName;
         this.response=response;
     }
-
 
     /**
      * Returns type of Request.
@@ -55,14 +57,13 @@ public class Request implements Serializable {
 
     /**
      * Returns response type
-     * @return type of your response
+     * @return type of your response.
      */
     public boolean getResponse(){return response;}
 
-
     /**
      * Sets type of request.
-     * @param type type of your request;
+     * @param type type of your request.
      */
     //Setters
     public void setType(RequestType type) {

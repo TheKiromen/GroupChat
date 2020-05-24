@@ -6,6 +6,12 @@ import java.awt.event.MouseEvent;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Server side of simple chat application.
+ * Class responsible for server frame GUI.
+ * Handles components added to frame, displays messages and alerts on screen.
+ * Provides safety when shutting down the server.
+ */
 public class ServerFrame extends JFrame {
 
     //Component Variables
@@ -54,7 +60,6 @@ public class ServerFrame extends JFrame {
         setResizable(true);
         setLocationRelativeTo(null);
         setVisible(true);
-
     }
 
     /**
@@ -100,7 +105,6 @@ public class ServerFrame extends JFrame {
 
                     //Start main Thread
                     ex.execute(new MainApp(frame));
-
                 }
             }
         });
@@ -123,11 +127,10 @@ public class ServerFrame extends JFrame {
         //Authors label
         authors.setFont(new Font("Arial",Font.PLAIN,12));
         authors.setBorder(BorderFactory.createEmptyBorder(0,10,10,0));
-
     }
 
     /**
-     * Initialize custom components
+     * Initialize custom components.
      */
     //Create and setup custom components
     private void createUIComponents(){
@@ -174,7 +177,5 @@ public class ServerFrame extends JFrame {
             }
         });
     }
-
-
 
 }

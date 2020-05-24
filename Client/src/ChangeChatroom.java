@@ -6,6 +6,10 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+/**
+ * Class provides possibility to change the chatroom.
+ * Shows a list of chatrooms existing.
+ */
 public class ChangeChatroom extends JFrame {
     //Component Variables
     private JList chatroomList;
@@ -39,7 +43,6 @@ public class ChangeChatroom extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
 
     /**
      * Configures components before adding them to frame.
@@ -79,7 +82,9 @@ public class ChangeChatroom extends JFrame {
         });
     }
 
-
+    /**
+     * Initialize custom components
+     */
     private void createUIComponents(){
         changeButton = new MyButton("Create");
         changeButton.setContentAreaFilled(false);

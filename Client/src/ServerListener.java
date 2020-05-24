@@ -5,6 +5,9 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.ArrayList;
 
+/**
+ * Class responsible for handling incoming messages and connecting to server.
+ */
 public class ServerListener implements Runnable {
 
     //Variables

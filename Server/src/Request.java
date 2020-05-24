@@ -1,5 +1,8 @@
 import java.io.Serializable;
 
+/**
+ * Class responsible for handling clients' requests such as changing or creating new chatroom.
+ */
 public class Request implements Serializable {
     private RequestType type;
     private String chatroomName=null;
@@ -35,7 +38,6 @@ public class Request implements Serializable {
         this.response=response;
     }
 
-
     /**
      * Returns type of Request.
      * @return the type of request.
@@ -58,7 +60,6 @@ public class Request implements Serializable {
      * @return type of received response
      */
     public boolean getResponse(){return response;}
-
 
     /**
      * Sets type of request.

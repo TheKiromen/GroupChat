@@ -4,6 +4,10 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * Class necessary to stop the work of sever.
+ * Makes sure if the client really want to shut it down.
+ */
 public class ShutDown extends JFrame {
 
     //Component variables

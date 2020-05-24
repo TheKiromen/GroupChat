@@ -8,6 +8,11 @@ import java.io.ObjectOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Class responsible for handling new chatrooms creating.
+ * Defines and verifies requirements of chatroom name.
+ */
+
 public class CreateChatroom extends JFrame {
     //Component Variables
     private JPanel creatingPanel;
@@ -43,9 +48,7 @@ public class CreateChatroom extends JFrame {
 
         textField1.addActionListener(a);
         createButton.addActionListener(a);
-
     }
-
 
     /**
      * Configures components before adding them to frame.
@@ -66,21 +69,24 @@ public class CreateChatroom extends JFrame {
         createButton.setBorder(BorderFactory.createRaisedBevelBorder());
     }
 
+    /**
+     * Initializes custom components
+     */
     private void createUIComponents(){
         createButton = new MyButton("Create");
         createButton.setContentAreaFilled(false);
         createButton.setFocusable(false);
     }
 
-
+    /**
+     * Checks if the chatroom name is valid.
+     */
     private class Action implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             String tmp=textField1.getText();
             matcher=regex.matcher(tmp);
 
-
-            //Check if username is valid
             if(tmp.length()>=4 && tmp.length()<=20){
                 if(matcher.matches()){
                     try {
@@ -91,10 +97,10 @@ public class CreateChatroom extends JFrame {
                         e.printStackTrace();
                     }
                 }else{
-                    JOptionPane.showMessageDialog(null,"Username can contain only letters and numbers.");
+                    JOptionPane.showMessageDialog(null,"Chatroom name can contain only letters and numbers.");
                 }
             }else{
-                JOptionPane.showMessageDialog(null,"Username should be 4 to 20 characters long.");
+                JOptionPane.showMessageDialog(null,"Chatroom name should be 4 to 20 characters long.");
             }
 
         }

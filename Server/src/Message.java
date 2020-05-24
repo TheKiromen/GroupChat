@@ -1,5 +1,9 @@
 import java.io.Serializable;
 
+/**
+ * Class responsible for handling message objects.
+ * Gives information about sender and content of the message.
+ */
 public class Message implements Serializable {
 
     private String sender;

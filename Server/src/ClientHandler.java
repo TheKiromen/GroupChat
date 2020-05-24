@@ -2,6 +2,10 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * Class handles connection and communication between clients.
+ * Allows to handle requests and communicate with specified client - send and receive messages.
+ */
 public class ClientHandler implements Runnable {
 
     //Variables
@@ -19,7 +23,7 @@ public class ClientHandler implements Runnable {
      * Creates new thread responsible for communication with specified client
      * @param clientSocket client Socket you want communicate with
      * @param users list of users in chatroom.
-     * @throws IOException When cant establish stream connection with client.
+     * @throws IOException When can't establish stream connection with client.
      */
     //Constructor, setting up communication streams
     public ClientHandler(Socket clientSocket, ArrayList<Chatroom> users,Chatroom chatroom, ServerFrame f) throws IOException{
@@ -55,7 +59,7 @@ public class ClientHandler implements Runnable {
                     msg=(Message)input;
                     frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom: "+ currentChatroom.getChatroomName());
                     sendMessageToAll(msg);
-                }catch(ClassCastException ex){
+                } catch(ClassCastException ex){
 
                     //If incoming Object is a request, handle it according to its type.
                     Request r = (Request)input;
@@ -116,7 +120,7 @@ public class ClientHandler implements Runnable {
                 }
             }
         }
-        //Handle user disconnection
+        //Handle user disconnection. Sends message to all clients in the chatroom.
         catch(IOException e){
             frame.writeToConsole(username+" disconnected.");
             currentChatroom.getUsers().remove(this);
@@ -126,7 +130,7 @@ public class ClientHandler implements Runnable {
                 ex.printStackTrace();
             }
         }
-        //Wrong object type
+        //Wrong object type exception
         catch(ClassNotFoundException e){
             System.err.println(e.getMessage());
         }
