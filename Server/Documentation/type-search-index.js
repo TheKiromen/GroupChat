@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"Chatroom"},{"p":"<Unnamed>","l":"ClientHandler"},{"p":"<Unnamed>","l":"MainApp"},{"p":"<Unnamed>","l":"Message"},{"p":"<Unnamed>","l":"MyButton"},{"p":"<Unnamed>","l":"Request"},{"p":"<Unnamed>","l":"RequestType"},{"p":"<Unnamed>","l":"ServerFrame"},{"p":"<Unnamed>","l":"ShutDown"}]

@@ -1,19 +1,21 @@
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Class handles connection and communication between clients.
+ * Allows to handle requests and communicate with specified client - send and receive messages.
+ */
 public class ClientHandler implements Runnable {
 
     //Variables
-    Object input;
-    String username;
-    private int chatroom;
-    private ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users;
+    private Object input;
+    private String username;
+    private Chatroom currentChatroom;
+    private ArrayList<Chatroom> chatrooms;
     private Socket client;
     private ObjectInputStream inFromClient;
     private ObjectOutputStream outToClient;
-
     private ServerFrame frame;
 
 
@@ -21,13 +23,13 @@ public class ClientHandler implements Runnable {
      * Creates new thread responsible for communication with specified client
      * @param clientSocket client Socket you want communicate with
      * @param users list of users in chatroom.
-     * @throws IOException When cant establish stream connection with client.
+     * @throws IOException When can't establish stream connection with client.
      */
     //Constructor, setting up communication streams
-    public ClientHandler(Socket clientSocket, ConcurrentHashMap<Integer,ArrayList<ClientHandler>> users, int chatroom,ServerFrame f) throws IOException{
+    public ClientHandler(Socket clientSocket, ArrayList<Chatroom> users,Chatroom chatroom, ServerFrame f) throws IOException{
         this.client = clientSocket;
-        this.users = users;
-        this.chatroom=chatroom;
+        this.chatrooms = users;
+        this.currentChatroom =chatroom;
         this.frame=f;
 
         inFromClient = new ObjectInputStream(client.getInputStream());
@@ -45,6 +47,7 @@ public class ClientHandler implements Runnable {
             //Send message about new connection to chatroom
             Message msg=(Message)inFromClient.readObject();
             username=msg.getSender();
+            frame.writeToConsole(username+" connected.");
             sendMessageToAll(new Message("[Server]",username+" joined!"));
 
             //Main loop for broadcasting messages
@@ -54,24 +57,84 @@ public class ClientHandler implements Runnable {
                 try {
                     //If incoming Object is a message, broadcast it.
                     msg=(Message)input;
-                    frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom "+chatroom);
+                    frame.writeToConsole(msg.getSender()+" sent: \"" + msg.getContent()+"\" to chatroom: "+ currentChatroom.getChatroomName());
                     sendMessageToAll(msg);
-                }catch(ClassCastException ex){
+                } catch(ClassCastException ex){
+
                     //If incoming Object is a request, handle it according to its type.
                     Request r = (Request)input;
                     frame.writeToConsole(username+" sent new request: "+r.getType());
-                    changeChatroom(r.getId());
-                    sendMessageToAll(new Message("[Server]","You have joined chatroom2"));
+
+                    //Chatroom change request
+                    if(r.getType()==RequestType.CHATROOM_CHANGE){
+                        //Check if chatroom already exists
+                        for(int i=0;i<chatrooms.size();i++){
+                            //If exists send change to it, send successful response
+                            if((chatrooms.get(i).getChatroomName().equals(r.getChatroomName()))&&currentChatroom!=chatrooms.get(i)){
+                                changeChatroom(chatrooms.get(i));
+
+                                //Send successful change response
+                                outToClient.writeObject(new Request(RequestType.CHATROOM_CHANGE,r.getChatroomName(),true));
+                                outToClient.flush();
+
+                                break;
+                            }//If does not exits send invalid chatroom response
+                            else if(i==chatrooms.size()-1){
+                                //Send invalid change response
+                                outToClient.writeObject(new Request(RequestType.CHATROOM_CHANGE,r.getChatroomName(),false));
+                                outToClient.flush();
+                                break;
+                            }
+                        }
+                    //Create new chatroom request
+                    }else if(r.getType()==RequestType.CREATE_CHATROOM){
+                        //Check if chatroom already exists
+                        for(int i=0;i<chatrooms.size();i++){
+                            //If exists send "invalid chatroom" response
+                            if(chatrooms.get(i).getChatroomName().equals(r.getChatroomName())){
+                                outToClient.writeObject(new Request(RequestType.CREATE_CHATROOM,r.getChatroomName(),false));
+                                outToClient.flush();
+                                break;
+
+                            }//If does not exits create chatroom, and connect user to it.
+                            else if(i==chatrooms.size()-1){
+                                chatrooms.add(new Chatroom(r.getChatroomName(),new ArrayList<ClientHandler>()));
+                                //created chatroom is added to end of arrayList
+                                changeChatroom(chatrooms.get(chatrooms.size()-1));
+
+                                //Send successful creation response
+                                outToClient.writeObject(new Request(RequestType.CREATE_CHATROOM,r.getChatroomName(),true));
+                                outToClient.flush();
+                                break;
+                            }
+                        }
+                    }//Sent list of current chatrooms
+                    else if(r.getType()==RequestType.GET_CHATROOM_LIST){
+                        String[] tmp = new String[chatrooms.size()];
+                        for(int i=0; i<chatrooms.size();i++){
+                            tmp[i]=chatrooms.get(i).getChatroomName();
+                        }
+                        outToClient.writeObject(tmp);
+                        outToClient.flush();
+                    }
                 }
             }
         }
-        catch(IOException | ClassNotFoundException e){
-            //Temporary disconnection handling
-            //TODO disconnect() method to show message and delete user from array's
-            //TODO more advanced error handling
-            System.err.println(e.getMessage());
+        //Handle user disconnection. Sends message to all clients in the chatroom.
+        catch(IOException e){
             frame.writeToConsole(username+" disconnected.");
-        }//Cleanup
+            currentChatroom.getUsers().remove(this);
+            try {
+                sendMessageToAll(new Message("[Server]",username+" disconnected."));
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        //Wrong object type exception
+        catch(ClassNotFoundException e){
+            System.err.println(e.getMessage());
+        }
+        //Cleanup
         finally{
             try {
                 inFromClient.close();
@@ -100,22 +163,23 @@ public class ClientHandler implements Runnable {
      */
     //Method for safe message broadcasting from inside and outside the Thread
     public void sendMessageToAll(Message msg) throws IOException{
-        for(ClientHandler u : users.get(chatroom)){
+        for(ClientHandler u : currentChatroom.getUsers()){
             u.sendMessage(msg);
         }
     }
 
     /**
      * Change chatroom user is connected to.
-     * @param id Id of your target chatroom.
+     * @param chatroom Chatroom you want to connect to
      * @throws IOException When stream error occurs.
      */
     //Method for changing chatroom
-    private void changeChatroom(int id) throws IOException {
-        users.get(chatroom).remove(this);
+    private void changeChatroom(Chatroom chatroom) throws IOException {
+        this.currentChatroom.getUsers().remove(this);
         sendMessageToAll(new Message("[Server]",username+" has left the room."));
-        this.chatroom=id;
-        users.get(chatroom).add(this);
+        this.currentChatroom =chatroom;
+        sendMessageToAll(new Message("[Server]",username+" has joined the room."));
+        chatroom.getUsers().add(this);
     }
 
 }

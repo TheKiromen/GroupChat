@@ -1,13 +1,20 @@
+import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 
+/**
+ * Class responsible for handling incoming messages and connecting to server.
+ */
 public class ServerListener implements Runnable {
 
     //Variables
     private Socket server;
     private ObjectInputStream inFromServer;
+    private ChatWindow frame;
+    private Object input;
 
     /**
      * Creates new thread with associated socket. Responsible for receiving messages from server.
@@ -15,8 +22,9 @@ public class ServerListener implements Runnable {
      * @throws IOException When cant establish connection stream with server.
      */
     //Constructor, setting up input stream from server
-    ServerListener(Socket sv) throws IOException {
+    ServerListener(Socket sv, ChatWindow f) throws IOException {
         this.server=sv;
+        this.frame=f;
         inFromServer = new ObjectInputStream(server.getInputStream());
     }
 
@@ -29,21 +37,53 @@ public class ServerListener implements Runnable {
         try {
             //Main loop for listening for messages
             while(true){
-                //Read and print out message
-                Message msg = (Message)inFromServer.readObject();
-                System.out.println(msg.getSender()+": "+msg.getContent());
+                try {
+                    //Read and print out message
+                    input=inFromServer.readObject();
+                    Message msg = (Message) input;
+                    frame.writeToConsole(msg.getSender() + ": " + msg.getContent());
+                //If input is a response to your request.
+                }catch(ClassCastException e){
+                    try {
+                        Request r = (Request) input;
+                        //Create chatroom request
+                        if (r.getType() == RequestType.CREATE_CHATROOM) {
+                            //If successful - change label
+                            if (r.getResponse() == true) {
+                                frame.changeChatroomLabel(r.getChatroomName());
+                                frame.writeToConsole("Changed chatroom to " + r.getChatroomName());
+                            }//If failed - show dialog
+                            else {
+                                JOptionPane.showMessageDialog(frame, "Chatroom already exists.");
+                            }
+                            //Change chatroom request
+                        } else if (r.getType() == RequestType.CHATROOM_CHANGE) {
+                            //If successful - change label
+                            if (r.getResponse() == true) {
+                                frame.writeToConsole("Changed chatroom to " + r.getChatroomName());
+                                frame.changeChatroomLabel(r.getChatroomName());
+                            }//If failed - show dialog
+                            else {
+                                JOptionPane.showMessageDialog(frame, "You are already connected to this chatroom.");
+                            }
+                        }
+                    }catch(ClassCastException ex){
+                        String[] tmp = (String[])input;
+                        frame.showChangeChatroomDialog(tmp);
+                    }
+                }
             }
 
         }//Exception when server closes
         catch(SocketException e){
-            System.err.println("Disconnected from the server.");
+            JOptionPane.showMessageDialog(null,"Lost connection to the server");
+            System.exit(0);
         }
-        catch (IOException e) {
+        catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }//Cleanup
-        catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
+        finally {
+            //Close communication stream if its not already closed
             try {
                 inFromServer.close();
             } catch (IOException e) {

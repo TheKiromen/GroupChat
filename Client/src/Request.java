@@ -1,8 +1,12 @@
 import java.io.Serializable;
 
+/**
+ * Class responsible for handling clients' requests such as changing or creating new chatroom.
+ */
 public class Request implements Serializable {
     private RequestType type;
-    private Integer id = null;
+    private String chatroomName=null;
+    private boolean response = false;
 
     /**
      * Create Request object of given type.
@@ -15,11 +19,23 @@ public class Request implements Serializable {
     /**
      * Create Request of given type with destined chatroom.
      * @param type Type of request you want to create.
-     * @param id Id of chatroom you want to target with request.
+     * @param chatroomName Name of chatroom you want connect to.
      */
-    public Request(RequestType type, Integer id){
+    public Request(RequestType type, String chatroomName){
         this.type=type;
-        this.id = id;
+        this.chatroomName=chatroomName;
+    }
+
+    /**
+     * Create response Request regarding given requestType.
+     * @param type type of request you want respond to.
+     * @param chatroomName chatroom regarding this response.
+     * @param response type of response, failed/succeeded operation.
+     */
+    public Request(RequestType type, String chatroomName, boolean response){
+        this.type=type;
+        this.chatroomName=chatroomName;
+        this.response=response;
     }
 
     /**
@@ -32,16 +48,22 @@ public class Request implements Serializable {
     }
 
     /**
-     * Returns ID of chatroom targeted by request.
-     * @return the id of chatroom targeted by request.
+     * Returns type of Request.
+     * @return name of the target chatroom.
      */
-    public Integer getId() {
-        return id;
+    public String getChatroomName(){
+        return chatroomName;
     }
 
     /**
+     * Returns response type
+     * @return type of your response.
+     */
+    public boolean getResponse(){return response;}
+
+    /**
      * Sets type of request.
-     * @param type type of your request;
+     * @param type type of your request.
      */
     //Setters
     public void setType(RequestType type) {
@@ -49,10 +71,10 @@ public class Request implements Serializable {
     }
 
     /**
-     * Sets destined chatroom
-     * @param id id of your targeted chatroom.
+     * Sets type of request.
+     * @param chatroomName Name of chatroom you want to connect.
      */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setChatroomName(String chatroomName){
+        this.chatroomName=chatroomName;
     }
 }

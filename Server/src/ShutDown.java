@@ -4,30 +4,40 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * Class necessary to stop the work of sever.
+ * Makes sure if the client really want to shut it down.
+ */
 public class ShutDown extends JFrame {
 
+    //Component variables
     private JLabel questionLabel;
     private MyButton yesButton;
     private MyButton noButton;
     private JPanel ShutDown;
-    private int result=2;
 
+    //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
+
+    //Color
     private Color fg= new Color(217, 208, 195);
 
+
+    //Constructor
     public ShutDown(ServerFrame f) {
 
+        //Setup frame
         setUpComponents();
         add(ShutDown);
         setSize(400, 180);
         setMinimumSize(new Dimension(400, 180));
-
         setTitle("WARNING: Server shutdown!");
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
 
+        //Assign behavior to buttons
         yesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -43,8 +53,9 @@ public class ShutDown extends JFrame {
         });
     }
 
-    public int getResult() {return result;}
-
+    /**
+     * Configures components before adding them to frame.
+     */
     private void setUpComponents() {
 
         questionLabel.setFont(componentsFont);
@@ -67,6 +78,9 @@ public class ShutDown extends JFrame {
 
     }
 
+    /**
+     * Initialize custom components
+     */
     //Create and setup custom components
     private void createUIComponents(){
         yesButton = new MyButton();

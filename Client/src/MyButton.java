@@ -3,6 +3,10 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import java.awt.*;
 
+/**
+ * Allows customizing all the buttons in this application.
+ * Buttons change appearance when pressed.
+ */
 public class MyButton extends JButton {
 
     //Button Colors
@@ -25,7 +29,10 @@ public class MyButton extends JButton {
         super(a);
     }
 
-
+    /**
+     * Allows an application to paint the button.
+     * @param g object of the abstract base class for graphics contexts.
+     */
     //Button behavior
     @Override
     protected void paintComponent(Graphics g) {

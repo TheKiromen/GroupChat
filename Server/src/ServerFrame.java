@@ -6,10 +6,15 @@ import java.awt.event.MouseEvent;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Server side of simple chat application.
+ * Class responsible for server frame GUI.
+ * Handles components added to frame, displays messages and alerts on screen.
+ * Provides safety when shutting down the server.
+ */
 public class ServerFrame extends JFrame {
 
-    //\/ These are managed by Intellij's GUI designer
-    //Components
+    //Component Variables
     private MyButton mainButton;
     private JPanel serverPanel;
     private JTextArea console;
@@ -17,7 +22,7 @@ public class ServerFrame extends JFrame {
     private JLabel status;
     private JLabel ip;
     private JLabel port;
-
+    private JLabel authors;
 
     //Fonts
     private Font componentsFont = new Font("Arial", Font.BOLD, 16);
@@ -26,25 +31,19 @@ public class ServerFrame extends JFrame {
     //Borders
     private Border spacing = BorderFactory.createEmptyBorder(50, 0, 0, 0);
 
-    //Variables
+    //Program Variables
     public boolean isRunning = false;
     private ServerFrame frame;
     private ExecutorService ex = Executors.newSingleThreadExecutor();
 
-    private ShutDown message;
 
+    //-----------------------------MAIN METHOD-------------------------//
     public static void main(String[] args) {
         new ServerFrame();
     }
 
 
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    //TODO - Improve error handling
-    //TODO - Custom disconnection dialog?
-    //TODO - Improve user disconnection handling.
-    //TODO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
+    //Constructor
     public ServerFrame() {
 
         frame=this;
@@ -56,14 +55,16 @@ public class ServerFrame extends JFrame {
         setMinimumSize(new Dimension(820, 614));
 
         //Frame setup
-        setTitle("Server Application");
+        setTitle("Chat application by: M. Haracz, D. Kruczek");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(true);
         setLocationRelativeTo(null);
         setVisible(true);
-
     }
 
+    /**
+     * Configures components before adding them to frame.
+     */
     //Set up Java components
     private void setUpComponents() {
 
@@ -104,7 +105,6 @@ public class ServerFrame extends JFrame {
 
                     //Start main Thread
                     ex.execute(new MainApp(frame));
-
                 }
             }
         });
@@ -124,8 +124,14 @@ public class ServerFrame extends JFrame {
         port.setFont(componentsFont);
         port.setBorder(spacing);
 
+        //Authors label
+        authors.setFont(new Font("Arial",Font.PLAIN,12));
+        authors.setBorder(BorderFactory.createEmptyBorder(0,10,10,0));
     }
 
+    /**
+     * Initialize custom components.
+     */
     //Create and setup custom components
     private void createUIComponents(){
         mainButton = new MyButton();
@@ -133,6 +139,19 @@ public class ServerFrame extends JFrame {
         mainButton.setFocusable(false);
     }
 
+    /**
+     * Method to display text on server console
+     * @param text text you want to display
+     */
+    //Write text to textArea
+    public void writeToConsole(String text){
+        console.append(text+"\n");
+    }
+
+    /**
+     * Method to safely shut down the server
+     */
+    //Shut down the server
     public void shutDown(){
         isRunning=false;
 
@@ -157,11 +176,6 @@ public class ServerFrame extends JFrame {
                 }
             }
         });
-    }
-
-    //Write text to textArea
-    public void writeToConsole(String text){
-        console.append(text+"\n");
     }
 
 }
