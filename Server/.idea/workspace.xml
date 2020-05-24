@@ -7,162 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a664fc9f-5f7d-485e-8c1f-0fd90c771878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChangeChatroom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChatWindow.MessageSender.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ChatWindow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/CreateChatroom.Action.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/CreateChatroom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/Message.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/MyButton.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/Request.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/RequestType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/ServerListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/UsernameFrame.Action.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/UsernameFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/allclasses-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/allpackages-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/member-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/resources/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/resources/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/type-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Documentation/type-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/Chatroom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/ClientHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/MainApp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/Message.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/MyButton.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/Request.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/RequestType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/ServerFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/ShutDown.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/allclasses-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/allpackages-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-19.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip/dist/jszip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/member-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/package-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/package-search-index.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/resources/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/resources/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/type-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/artifacts/Client_jar/Client.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChangeChatroom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$MessageSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow$MessageSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/ChatWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom$Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom$Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/CreateChatroom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame$Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/out/production/Client/UsernameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
